@@ -1,0 +1,193 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: CR_RETURNED_DATE_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_RETURNED_TIME_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_ITEM_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_REFUNDED_CUSTOMER_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_REFUNDED_CDEMO_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_REFUNDED_HDEMO_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_REFUNDED_ADDR_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_RETURNING_CUSTOMER_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_RETURNING_CDEMO_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_RETURNING_HDEMO_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_RETURNING_ADDR_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_CALL_CENTER_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_CATALOG_PAGE_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_SHIP_MODE_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_WAREHOUSE_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_REASON_SK
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_ORDER_NUMBER
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_RETURN_QUANTITY
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_RETURN_AMOUNT
+    type: decimal(7,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_RETURN_TAX
+    type: decimal(7,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_RETURN_AMT_INC_TAX
+    type: decimal(7,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_FEE
+    type: decimal(7,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_RETURN_SHIP_COST
+    type: decimal(7,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_REFUNDED_CASH
+    type: decimal(7,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_REVERSED_CHARGE
+    type: decimal(7,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_STORE_CREDIT
+    type: decimal(7,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CR_NET_LOSS
+    type: decimal(7,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

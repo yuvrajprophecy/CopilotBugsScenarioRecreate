@@ -1,0 +1,1 @@
+{"initCode":"data=\"text\"","code":"@udf(returnType=StringType())\ndef sanitize_numeric(input):\n    return f\"{input}_{data}\""}

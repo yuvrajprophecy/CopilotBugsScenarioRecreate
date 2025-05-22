@@ -1,0 +1,1 @@
+{"initCode":"int_val=22","code":"@udf(returnType=IntegerType())\ndef sanitize_numeric(input):\n    input = int(input) if input is not None else 2\n    return int(input)*int(input) if input is not None else int_val"}
