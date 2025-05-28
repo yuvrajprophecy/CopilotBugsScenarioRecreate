@@ -1,0 +1,57 @@
+---
+version: 2
+models:
+- name: "model_test_pipeline_Sort_266"
+  tags:
+  - "prophecy_temp"
+- name: "model_test_pipeline_Cleanse_290"
+  tags:
+  - "prophecy_temp"
+- name: "model_test_pipeline_Join_318_inner"
+  tags:
+  - "prophecy_temp"
+- name: "model_test_pipeline_AlteryxSelect_294"
+  tags:
+  - "prophecy_temp"
+- name: "model_test_pipeline_Join_310_inner"
+  tags:
+  - "prophecy_temp"
+sources:
+- name: "prophecy__temp_test_pipeline_source"
+  database: "main"
+  schema: "rishabh"
+  tags:
+  - "prophecy_temp"
+  config:
+    enabled: true
+  tables:
+  - name: "prophecy__temp_test_pipeline_post_AlteryxSelect_294_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_test_pipeline_post_Cleanse_290_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_test_pipeline_post_Sort_266_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_test_pipeline_pre_Cleanse_290_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_test_pipeline_pre_Filter_303_reject_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_test_pipeline_pre_Filter_323_reject_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_test_pipeline_pre_Join_299_inner_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_test_pipeline_pre_Join_299_inner_1"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_test_pipeline_pre_Join_313_inner_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_test_pipeline_pre_Join_313_inner_1"
+    tags:
+    - "prophecy_temp"

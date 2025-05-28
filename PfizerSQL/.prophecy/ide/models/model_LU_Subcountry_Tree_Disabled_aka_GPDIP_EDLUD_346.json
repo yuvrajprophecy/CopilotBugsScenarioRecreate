@@ -1,0 +1,90 @@
+{
+  "id" : "model_LU_Subcountry_Tree_Disabled_aka_GPDIP_EDLUD_346",
+  "metainfo" : {
+    "label" : "model_LU_Subcountry_Tree_Disabled_aka_GPDIP_EDLUD_346",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0\"",
+        "materialized" : "table",
+        "database" : "\"main\"",
+        "schema" : "\"rishabh\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0" : {
+      "id" : "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_346",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM aka_GPDIP_EDLUD_346\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0_1",
+          "slug" : "input_port_0_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0_1",
+          "slug" : "output_port_0_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w" : {
+      "id" : "x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_346",
+        "x" : -4400,
+        "y" : -400,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "SELECT app_country_id\n       , country_name\n       , country_abbreviation\n       , product_name\n       , parent_app_country_id\n       , is_static\n       , is_active\n       , date_updated\n       , date_created\n FROM gpdip_prd.gpdip_uddl_regulatory.pfleet_country\nWHERE  is_active = 1",
+          "sourceType" : "UnreferencedSource",
+          "sourceName" : null,
+          "alias" : null,
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "iCK41BzU-eW1NUiN-SyU7$$JTIywAdyh92aqngqImigE",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w_prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0",
+    "source" : "x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w",
+    "sourcePort" : "iCK41BzU-eW1NUiN-SyU7$$JTIywAdyh92aqngqImigE",
+    "target" : "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0",
+    "targetPort" : "input_port_0_1"
+  } ],
+  "component" : "Model"
+}

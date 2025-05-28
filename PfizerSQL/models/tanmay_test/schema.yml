@@ -1,0 +1,27 @@
+---
+version: 2
+models:
+- name: "model_tanmay_test_AlteryxSelect_327"
+  tags:
+  - "prophecy_temp"
+- name: "model_tanmay_test_Summarize_305"
+  tags:
+  - "prophecy_temp"
+sources:
+- name: "prophecy__temp_tanmay_test_source"
+  database: "main"
+  schema: "rishabh"
+  tags:
+  - "prophecy_temp"
+  config:
+    enabled: true
+  tables:
+  - name: "prophecy__temp_tanmay_test_post_AlteryxSelect_327_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_tanmay_test_post_Summarize_305_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_tanmay_test_pre_Filter_303_reject_0"
+    tags:
+    - "prophecy_temp"

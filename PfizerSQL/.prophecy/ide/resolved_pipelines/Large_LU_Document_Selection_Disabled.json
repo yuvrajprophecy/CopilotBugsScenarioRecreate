@@ -1,0 +1,1116 @@
+{
+  "id" : "Large_LU_Document_Selection_Disabled",
+  "metainfo" : {
+    "label" : "Large_LU_Document_Selection_Disabled",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    }
+  },
+  "processes" : {
+    "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_303_reject_0" : {
+      "id" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_303_reject_0",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "AKA_GPDIP_EDLUD_302",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_303_reject_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_Large_LU_Document_Selection_Disabled_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_2_1",
+          "slug" : "input_port_2_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_2_1",
+          "slug" : "output_port_2_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_299_inner_1" : {
+      "id" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_299_inner_1",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "LARGE_AKA_GPDIP_EDLUD_298_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_299_inner_1",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_Large_LU_Document_Selection_Disabled_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_5_1",
+          "slug" : "input_port_5_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_5_1",
+          "slug" : "output_port_5_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0" : {
+      "id" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "LARGE_AKA_GPDIP_EDLUD_324",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_Large_LU_Document_Selection_Disabled_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_3_1",
+          "slug" : "input_port_3_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_3_1",
+          "slug" : "output_port_3_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_1" : {
+      "id" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_1",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "LARGE_AKA_GPDIP_EDLUD_312",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_1",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_Large_LU_Document_Selection_Disabled_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_7_1",
+          "slug" : "input_port_7_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_7_1",
+          "slug" : "output_port_7_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "13FpVTF_YtF519EVFh95W$$7fgZq34u6iFu850OlE2LM" : {
+      "id" : "13FpVTF_YtF519EVFh95W$$7fgZq34u6iFu850OlE2LM",
+      "component" : "OrchestrationTarget",
+      "kind" : "RedshiftTarget",
+      "metadata" : {
+        "label" : "document_metadata_redshift",
+        "x" : 880,
+        "y" : -180,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "redshift",
+          "properties" : {
+            "id" : "RedShiftTest"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "category" : "table",
+          "kind" : "redshift",
+          "properties" : {
+            "kind" : "redshift",
+            "properties" : { },
+            "writeMode" : "overwrite"
+          }
+        },
+        "isNew" : false,
+        "properties" : {
+          "tableFullName" : {
+            "database" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "prophecy"
+                  }
+                } ]
+              }
+            },
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "dummy"
+                  }
+                } ]
+              }
+            },
+            "name" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "large_flu_document_Selection_Disabled"
+                  }
+                } ]
+              }
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NZjX-RZZ68uORzRiUOvjS$$t_PsQH4wCNmC9QHOlFY4S",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in"
+        } ],
+        "outputs" : [ ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "BXmFY-aEPFf_hBVMrJtDH$$xJxLbEywlrNA0F_3md1nn" : {
+      "id" : "BXmFY-aEPFf_hBVMrJtDH$$xJxLbEywlrNA0F_3md1nn",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_299_inner_0", "BXmFY-aEPFf_hBVMrJtDH$$xJxLbEywlrNA0F_3md1nn", "prophecy__temp_Large_LU_Document_Selection_Disabled_post_Cleanse_290_0", "7qyBYLv1WW66jFB2baxax$$zxeyxhaEkPrZSaysURrIp", "r-_fcpTt_FbnRI7nB6WV-$$7zcp3A32zNqooObuRSrsv", "aV1r66li2K_WGg652Prfa$$NMavrReoJKiJVJX1W3rjg", "PsVrKEMkhRAmfwBtvmqiy$$lAft8ny3nZ6oJui8h-Dlg", "CAOuBB4-RCJ7CTir0TMUA$$c7pfjtqoat8GVqPGUF0Ft", "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_303_reject_0", "ybdfFEHay1tv7wMqWiJVE$$fo9c03j5GhEk9PJq90WbZ", "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_303_reject_0" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner_in_3",
+          "slug" : "in_3"
+        } ],
+        "outputs" : [ {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "I3SscKtzdEtk955hGb_eO" : {
+      "id" : "I3SscKtzdEtk955hGb_eO",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "AKA_GPDIP_EDLUD_302",
+        "x" : -1620,
+        "y" : -440,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "properties" : {
+            "id" : "oracle-test"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "oracle",
+          "properties" : {
+            "schema" : {
+              "fields" : [ {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "r_object_id"
+              }, {
+                "dataType" : {
+                  "type" : "decimal"
+                },
+                "name" : "i_position"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "name"
+              }, {
+                "dataType" : {
+                  "type" : "decimal"
+                },
+                "name" : "value"
+              } ],
+              "providerType" : "arrow"
+            }
+          }
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "database" : "default",
+            "name" : "AKA_GPDIP_EDLUD_302",
+            "schema" : "DEMOS"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT * FROM DEMOS.AKA_GPDIP_EDLUD_302 FETCH FIRST 1000 ROWS ONLY"
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "dd3ad985-ab1b-473f-a03f-0aa3b7afcb85",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "uviQ51jSbJVHapb01ARHT" : {
+      "id" : "uviQ51jSbJVHapb01ARHT",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "ORACLE_LARGE_AKA_GPDIP_EDLUD_289",
+        "x" : -920,
+        "y" : -20,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "properties" : {
+            "id" : "oracle-test"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "oracle",
+          "properties" : {
+            "schema" : {
+              "fields" : [ {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "is_static"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "extract_date"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "product_name"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "country_abbreviation"
+              }, {
+                "dataType" : {
+                  "type" : "decimal"
+                },
+                "name" : "app_country_id"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "country_name"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "is_active"
+              } ],
+              "providerType" : "arrow"
+            }
+          }
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "database" : "default",
+            "name" : "ORACLE_LARGE_AKA_GPDIP_EDLUD_289",
+            "schema" : "DEMOS"
+          },
+          "warehouseQuery" : { }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "024b8106-d246-47a3-8b39-8e59cacb74fa",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "is_static",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "product_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_abbreviation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_active",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "wTofJPV--JVzIDevNRfDe" : {
+      "id" : "wTofJPV--JVzIDevNRfDe",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "LARGE_AKA_GPDIP_EDLUD_298_1",
+        "x" : -460,
+        "y" : -60,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "properties" : {
+            "id" : "oracle-test"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "oracle",
+          "properties" : {
+            "schema" : {
+              "fields" : [ {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "i_has_folder"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "xm_language"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "r_object_id"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "title"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "i_chronicle_id"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "xm_status"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "object_name"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "subtype"
+              } ],
+              "providerType" : "arrow"
+            }
+          }
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "database" : "default",
+            "name" : "LARGE_AKA_GPDIP_EDLUD_298",
+            "schema" : "DEMOS"
+          },
+          "warehouseQuery" : { }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0e716075-d406-4668-bd0d-7d452c0c98db",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "i_has_folder",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "FH_ZJ6xN9yYhDC1HXMici" : {
+      "id" : "FH_ZJ6xN9yYhDC1HXMici",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "LARGE_AKA_GPDIP_EDLUD_324",
+        "x" : -1580,
+        "y" : 60,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "properties" : {
+            "id" : "oracle-test"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "oracle",
+          "properties" : {
+            "schema" : {
+              "fields" : [ {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "r_object_id"
+              }, {
+                "dataType" : {
+                  "type" : "decimal"
+                },
+                "name" : "i_position"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "name"
+              }, {
+                "dataType" : {
+                  "type" : "decimal"
+                },
+                "name" : "value"
+              } ],
+              "providerType" : "arrow"
+            }
+          }
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "database" : "default",
+            "name" : "LARGE_AKA_GPDIP_EDLUD_324",
+            "schema" : "DEMOS"
+          },
+          "warehouseQuery" : { }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0c23dcbe-dc11-4d45-a2c5-c5e165c9a77d",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Cleanse_290_0" : {
+      "id" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Cleanse_290_0",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "ORACLE_LARGE_AKA_GPDIP_EDLUD_289",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Cleanse_290_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_Large_LU_Document_Selection_Disabled_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0_1",
+          "slug" : "input_port_0_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0_1",
+          "slug" : "output_port_0_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN" : {
+      "id" : "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_0", "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN", "prophecy__temp_Large_LU_Document_Selection_Disabled_post_Cleanse_290_0", "KKW8avHf0q5YvFfFFvTqu$$OcaBCD5aC8bDjJPY3NVFW", "wY4dh_jwImQYsD4AKAQRd$$1HlKjcIM_mcOy4_Zfi_wJ", "V3CEkkOhgFzVFqmW7P2a3$$0HGcZJmBrAobLOpjtNXtE", "KC-rZMT4ozLscNvhdgHbC$$e7Xofy4QyGLQ0SeVKWO8-", "ofBynm4ulMlBX1e3lZncu$$tvu69Wn1icIjKsv-BhEII", "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0", "VGh6fAMvSYErVGRrDuiuG$$1p8TCANnzA5rlyniNtoCl", "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner_in_3",
+          "slug" : "in_3"
+        } ],
+        "outputs" : [ {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "ruD8R7pOaeM0hw7OPxC3f$$xWkbAW79dEd51bp208kYs" : {
+      "id" : "ruD8R7pOaeM0hw7OPxC3f$$xWkbAW79dEd51bp208kYs",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_Large_LU_Document_Selection_Disabled_Cleanse_290",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_Large_LU_Document_Selection_Disabled_Cleanse_290"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_Large_LU_Document_Selection_Disabled_post_Cleanse_290_0", "ruD8R7pOaeM0hw7OPxC3f$$xWkbAW79dEd51bp208kYs", "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Cleanse_290_0" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Cleanse_290_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_Large_LU_Document_Selection_Disabled_Cleanse_290_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "iuDhb3EBJMmwkXiW7-ylH" : {
+      "id" : "iuDhb3EBJMmwkXiW7-ylH",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "LARGE_AKA_GPDIP_EDLUD_312",
+        "x" : -580,
+        "y" : 340,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "properties" : {
+            "id" : "oracle-test"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "oracle",
+          "properties" : {
+            "schema" : {
+              "fields" : [ {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "subtype"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "object_name"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "xm_status"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "i_has_folder"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "xm_language"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "r_object_id"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "title"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "i_chronicle_id"
+              } ],
+              "providerType" : "arrow"
+            }
+          }
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "database" : "default",
+            "name" : "LARGE_AKA_GPDIP_EDLUD_312",
+            "schema" : "DEMOS"
+          },
+          "warehouseQuery" : { }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "c14cb50a-2db1-4573-b066-a641f02083ef",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_has_folder",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc" : {
+      "id" : "qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_Large_LU_Document_Selection_Disabled_post_AlteryxSelect_294_0", "qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc", "lI4wrzxIrq0Uihtrj42WZ$$byuOXWmWP5N_3p2J7ixzD", "U635guT1lIK3WySK99u3v$$wXtiu_Akmgmo3WG3zTH70", "sbUfWa5Bl280kryC6WQKM$$yiTeztHIF99VGidFtL3Fs", "67xo2QW8k-0M7VDVtTI0q$$hZt8i2NleRB_IF4zkob2D", "Nepo61GS1yVkIZJqA9yZd$$J6kQRs-i9QangnKOS-2_d", "Zbq9nBfjjJ81q1dh_YYdW$$8AYWKAocc4sXGS3H3KEKR", "viX2LSwz1U7KsrTTQ1-Wb$$8fXiVyb_Ty-k505ZjVScg", "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_299_inner_0", "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_299_inner_1", "vQUyWDKp-B5fAeXAFEpj-$$BKgc4zGSVjJ-qLCPJC9r6", "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_0", "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_1" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294_in_3",
+          "slug" : "in_3"
+        } ],
+        "outputs" : [ {
+          "id" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "s1zJS8sE47URiPHc6bUvn",
+    "source" : "uviQ51jSbJVHapb01ARHT",
+    "sourcePort" : "024b8106-d246-47a3-8b39-8e59cacb74fa",
+    "target" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Cleanse_290_0",
+    "targetPort" : "input_port_0_1"
+  }, {
+    "id" : "mVEog5ATiuFbjrVqYnYQo",
+    "source" : "I3SscKtzdEtk955hGb_eO",
+    "sourcePort" : "dd3ad985-ab1b-473f-a03f-0aa3b7afcb85",
+    "target" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_303_reject_0",
+    "targetPort" : "input_port_2_1"
+  }, {
+    "id" : "_ya_3Q7Cp3qTmyHZvZ8Aa",
+    "source" : "FH_ZJ6xN9yYhDC1HXMici",
+    "sourcePort" : "0c23dcbe-dc11-4d45-a2c5-c5e165c9a77d",
+    "target" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0",
+    "targetPort" : "input_port_3_1"
+  }, {
+    "id" : "DrqoXOvtDKd9XnWfb9_Hq",
+    "source" : "wTofJPV--JVzIDevNRfDe",
+    "sourcePort" : "0e716075-d406-4668-bd0d-7d452c0c98db",
+    "target" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_299_inner_1",
+    "targetPort" : "input_port_5_1"
+  }, {
+    "id" : "zF2HoT46-kP8Y0KUovi29",
+    "source" : "iuDhb3EBJMmwkXiW7-ylH",
+    "sourcePort" : "c14cb50a-2db1-4573-b066-a641f02083ef",
+    "target" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_1",
+    "targetPort" : "input_port_7_1"
+  }, {
+    "id" : "conn_prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_299_inner_1_viX2LSwz1U7KsrTTQ1-Wb$$8fXiVyb_Ty-k505ZjVScg_994GkEBShlBi5s6KKqn3_$$5Mu5BbRmSY_LTLku5txs7",
+    "source" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_299_inner_1",
+    "sourcePort" : "output_port_5_1",
+    "target" : "qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294_in_1"
+  }, {
+    "id" : "conn_prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_1_vQUyWDKp-B5fAeXAFEpj-$$BKgc4zGSVjJ-qLCPJC9r6_Si1z7bfj-zg-WBADZ7SIU$$omoAvfZfIZ3B5Dos-IxEu",
+    "source" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_1",
+    "sourcePort" : "output_port_7_1",
+    "target" : "qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294_in_3"
+  }, {
+    "id" : "conn_prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_303_reject_0_ybdfFEHay1tv7wMqWiJVE$$fo9c03j5GhEk9PJq90WbZ_2L2L_koGGAI7OrgeV4k-q$$4FQFngmj3u8TBKwbJL0TA",
+    "source" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_303_reject_0",
+    "sourcePort" : "output_port_2_1",
+    "target" : "BXmFY-aEPFf_hBVMrJtDH$$xJxLbEywlrNA0F_3md1nn",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner_in_2"
+  }, {
+    "id" : "conn_prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_303_reject_0_CAOuBB4-RCJ7CTir0TMUA$$c7pfjtqoat8GVqPGUF0Ft_mstA0OotiKMtELZVny2mQ$$TwAoG2nT3xVDz8-wxxXQ9",
+    "source" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_303_reject_0",
+    "sourcePort" : "output_port_2_1",
+    "target" : "BXmFY-aEPFf_hBVMrJtDH$$xJxLbEywlrNA0F_3md1nn",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner_in_3"
+  }, {
+    "id" : "conn_prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0_VGh6fAMvSYErVGRrDuiuG$$1p8TCANnzA5rlyniNtoCl_6s_F1fXerLgrwWT5arWqz$$WxnJPJ9NWkvxIDRmBBxuY",
+    "source" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0",
+    "sourcePort" : "output_port_3_1",
+    "target" : "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner_in_2"
+  }, {
+    "id" : "conn_prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0_ofBynm4ulMlBX1e3lZncu$$tvu69Wn1icIjKsv-BhEII_LFHZl-SG_C4FWFfD7cPUW$$9Plbf8w6agTjhbUM3ZJC1",
+    "source" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0",
+    "sourcePort" : "output_port_3_1",
+    "target" : "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner_in_3"
+  }, {
+    "id" : "conn_prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Cleanse_290_0_ruD8R7pOaeM0hw7OPxC3f$$xWkbAW79dEd51bp208kYs_XySqn3qHtKiZ0Zq4XjJnp$$YtI8PGUaoGI-LCP61KSBh",
+    "source" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Cleanse_290_0",
+    "sourcePort" : "output_port_0_1",
+    "target" : "ruD8R7pOaeM0hw7OPxC3f$$xWkbAW79dEd51bp208kYs",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_Cleanse_290_in_0"
+  }, {
+    "id" : "conn_BXmFY-aEPFf_hBVMrJtDH$$xJxLbEywlrNA0F_3md1nn_qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc",
+    "source" : "BXmFY-aEPFf_hBVMrJtDH$$xJxLbEywlrNA0F_3md1nn",
+    "sourcePort" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner_out_0",
+    "target" : "qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294_in_0"
+  }, {
+    "id" : "conn_Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN_qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc",
+    "source" : "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN",
+    "sourcePort" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner_out_0",
+    "target" : "qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294_in_0"
+  }, {
+    "id" : "conn_ruD8R7pOaeM0hw7OPxC3f$$xWkbAW79dEd51bp208kYs_BXmFY-aEPFf_hBVMrJtDH$$xJxLbEywlrNA0F_3md1nn",
+    "source" : "ruD8R7pOaeM0hw7OPxC3f$$xWkbAW79dEd51bp208kYs",
+    "sourcePort" : "model_Large_LU_Document_Selection_Disabled_Cleanse_290_out_0",
+    "target" : "BXmFY-aEPFf_hBVMrJtDH$$xJxLbEywlrNA0F_3md1nn",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_Join_310_inner_in_0"
+  }, {
+    "id" : "conn_ruD8R7pOaeM0hw7OPxC3f$$xWkbAW79dEd51bp208kYs_Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN",
+    "source" : "ruD8R7pOaeM0hw7OPxC3f$$xWkbAW79dEd51bp208kYs",
+    "sourcePort" : "model_Large_LU_Document_Selection_Disabled_Cleanse_290_out_0",
+    "target" : "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN",
+    "targetPort" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner_in_0"
+  }, {
+    "id" : "conn_qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc_13FpVTF_YtF519EVFh95W$$7fgZq34u6iFu850OlE2LM",
+    "source" : "qSwmO6NmtJQGRn-8GsU8u$$gZYuK_3mg68nwHkA7fxKc",
+    "sourcePort" : "model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294_out_0",
+    "target" : "13FpVTF_YtF519EVFh95W$$7fgZq34u6iFu850OlE2LM",
+    "targetPort" : "NZjX-RZZ68uORzRiUOvjS$$t_PsQH4wCNmC9QHOlFY4S"
+  } ],
+  "component" : "Pipeline"
+}

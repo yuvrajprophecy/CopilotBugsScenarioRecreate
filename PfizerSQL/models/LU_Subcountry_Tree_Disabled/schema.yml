@@ -1,0 +1,30 @@
+---
+version: 2
+models:
+- name: "model_LU_Subcountry_Tree_Disabled_DataCleansing_1"
+  tags:
+  - "prophecy_temp"
+- name: "model_LU_Subcountry_Tree_Disabled_Sort_266"
+  tags:
+  - "prophecy_temp"
+- name: "model_LU_Subcountry_Tree_Disabled_aka_GPDIP_EDLUD_346"
+  tags:
+  - "prophecy_temp"
+sources:
+- name: "prophecy__temp_LU_Subcountry_Tree_Disabled_source"
+  database: "main"
+  schema: "rishabh"
+  tags:
+  - "prophecy_temp"
+  config:
+    enabled: true
+  tables:
+  - name: "prophecy__temp_LU_Subcountry_Tree_Disabled_post_DataCleansing_1_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_LU_Subcountry_Tree_Disabled_post_Sort_266_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0"
+    tags:
+    - "prophecy_temp"

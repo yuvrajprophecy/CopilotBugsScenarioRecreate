@@ -1,0 +1,18 @@
+---
+version: 2
+models:
+- name: "model_LU_Product_Selection_Disabled_Formula_94"
+  tags:
+  - "prophecy_temp"
+sources:
+- name: "prophecy__temp_LU_Product_Selection_Disabled_source"
+  database: "main"
+  schema: "rishabh"
+  tags:
+  - "prophecy_temp"
+  config:
+    enabled: true
+  tables:
+  - name: "prophecy__temp_LU_Product_Selection_Disabled_post_Formula_94_0"
+    tags:
+    - "prophecy_temp"

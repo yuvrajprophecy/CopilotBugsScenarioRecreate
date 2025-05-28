@@ -1,0 +1,48 @@
+{
+  "id" : "test_target",
+  "metainfo" : {
+    "label" : "test_target",
+    "autoLayout" : false,
+    "staleState" : "file",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "test_target##pKWVeWeM" : {
+      "id" : "test_target##pKWVeWeM",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "test_target",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VXH01Kva",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "KZma1Prm",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Model"
+}

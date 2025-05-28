@@ -1,0 +1,4550 @@
+{
+  "id" : "LU_Document_Selection_Disabled",
+  "metainfo" : {
+    "label" : "LU_Document_Selection_Disabled",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    }
+  },
+  "processes" : {
+    "5kQ3HBGgCTtj2ksOJR3P1$$DmwLPaApcdMSbRHsMFrRE" : {
+      "id" : "5kQ3HBGgCTtj2ksOJR3P1$$DmwLPaApcdMSbRHsMFrRE",
+      "component" : "Union",
+      "metadata" : {
+        "label" : "Union_292",
+        "x" : 300,
+        "y" : -220,
+        "phase" : 0
+      },
+      "properties" : {
+        "operationType" : "union",
+        "preserveDuplicates" : true,
+        "useMinus" : false,
+        "inputAliases" : [ "in0", "in1" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VlEhnvnYUUpsZt2XeV2_8$$mItBiZPNISzoY4uxb_5XC",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "bqGfofKt-uNP0ac0-JOo7$$7-XYhKXlrOZTz_F-8DQEX",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "YeDSK4fuvYV6R1gzjVGPf$$qiZNnV9xMbZF2HTpXAIwI",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "orhEzAnIfeIWtzPH8efsf$$sYj9NIW8TZxe3IzaZVCbo" : {
+      "id" : "orhEzAnIfeIWtzPH8efsf$$sYj9NIW8TZxe3IzaZVCbo",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_310_inner",
+        "x" : -500,
+        "y" : -520,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.app_country_id = in1.pfleet_subcountry_row_id",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.extract_date",
+            "_row_id" : null
+          },
+          "alias" : "extract_date",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.app_country_id",
+            "_row_id" : null
+          },
+          "alias" : "app_country_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.country_name",
+            "_row_id" : null
+          },
+          "alias" : "country_name",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "IOAc-DzwsiLoCTWXi1d2K$$hFF2L9MpmERdoTBQMTk5M",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "is_active",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_static",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "product_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_abbreviation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "iRHLTwrbzoeX6RdHB3V3j$$Pw-ilRUp-PU-oGb1XOQuB",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pfleet_subcountry_row_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "7OoUl-_glWlvZ18LSJHZg$$lkvF6B9lIjv1D6uxxQGqo",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "YPpYmqOTlKJqLokPmPY5P$$D9qcuhUIgTZXisfMR3h2t" : {
+      "id" : "YPpYmqOTlKJqLokPmPY5P$$D9qcuhUIgTZXisfMR3h2t",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_303",
+        "x" : -1160,
+        "y" : -720,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "name = 'PFLEET_SUB_COUNTRY_ROW_ID'",
+          "_row_id" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9eljGiu33JrXl_TZsIWSL$$uXVIMrkit1WjZvfn_hx7s",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "53-zjJyghOPpNeZUdF30c$$OmS2cd5qPGNDosPDfQOzo",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "D6NY94iMBCoK2TFctUAcA$$GvcByMislQHbo_XO1I5qf" : {
+      "id" : "D6NY94iMBCoK2TFctUAcA$$GvcByMislQHbo_XO1I5qf",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Formula_300",
+        "x" : -100,
+        "y" : -420,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST('\\'http://gdms.pfizer.com/gdms/drl/objectId/\\' + [r_object_id]' AS STRING)",
+            "_row_id" : null
+          },
+          "alias" : "document_url",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "extract_date",
+            "_row_id" : null
+          },
+          "alias" : "extract_date",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "i_chronicle_id",
+            "_row_id" : null
+          },
+          "alias" : "i_chronicle_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "object_name",
+            "_row_id" : null
+          },
+          "alias" : "object_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "sub_country_id",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "sub_country_name",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "subtype",
+            "_row_id" : null
+          },
+          "alias" : "subtype",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "title",
+            "_row_id" : null
+          },
+          "alias" : "title",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "xm_language",
+            "_row_id" : null
+          },
+          "alias" : "xm_language",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "xm_status",
+            "_row_id" : null
+          },
+          "alias" : "xm_status",
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "mUIfw1GaXgpnY_Z0Z0ozn$$MaDRbJBLY5O6jIiVF6Msk",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "uHNny_j2fbPeMgBBDg5iW$$t2VD707fncqSwbaEi7-6O",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "AYpNsR2_VlcShxr6-jXlF$$aOO3whGW0y69VI9EKqDtw" : {
+      "id" : "AYpNsR2_VlcShxr6-jXlF$$aOO3whGW0y69VI9EKqDtw",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_326",
+        "x" : -1160,
+        "y" : -120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "i_position",
+            "_row_id" : null
+          },
+          "alias" : "i_position",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "name",
+            "_row_id" : null
+          },
+          "alias" : "name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "CAST(value AS INTEGER)",
+            "_row_id" : null
+          },
+          "alias" : "pfleet_subcountry_row_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "hoCOv0KkqK1_wBzDHaMKk$$DKlUY95xTJjNyMK4w6waX",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "7DiP246fCT0pYhLxNqe6h$$DJrqAo8GxcC635sY24Fmb",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pfleet_subcountry_row_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "i0jZFXRxMvBP2FxgjqzX6$$nO-EYblQnGA663TGwq2y9" : {
+      "id" : "i0jZFXRxMvBP2FxgjqzX6$$nO-EYblQnGA663TGwq2y9",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Summarize_317",
+        "x" : -960,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "concat_ws(',', collect_list(value))",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : "",
+          "_row_id" : null
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : null,
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "oXAY2B8NDE5e75oCrcqW7$$WLsNqqYoVYr4BoLY1E75w",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "QV_2-5_XHYQb8UOopXFyY$$FY3v46At7W6CNxoAvNb_c",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Ma1e7h4Eeh25V5H65TLRh$$VPx97wqbb2u4K83dKvk_S" : {
+      "id" : "Ma1e7h4Eeh25V5H65TLRh$$VPx97wqbb2u4K83dKvk_S",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "SQL_1K_LU_Document_Selection_Disabled",
+        "x" : 860,
+        "y" : -220,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "SQL_1K_LU_Document_Selection_Disabled",
+          "sourceType" : "Table",
+          "sourceName" : "main.rishabh",
+          "alias" : "",
+          "additionalProperties" : null
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-8uiLNtI7xM36dGmEC2bt$$RsDDsenU-nZsKt1iA-GOT",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "SdR7EIppjQ9fJrqs6RKbx$$x376283LfutMfSKUNEwLD",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "eA4IujEBA-jsWES6XyDI6$$Oq-69O7Aw823vgw2QyxL7" : {
+      "id" : "eA4IujEBA-jsWES6XyDI6$$Oq-69O7Aw823vgw2QyxL7",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "Sort_293",
+        "x" : 500,
+        "y" : -220,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "orders" : [ {
+          "expression" : {
+            "expression" : "ENCODE(CAST(sub_country_id AS string), 'utf-8')",
+            "_row_id" : null
+          },
+          "sortType" : "asc",
+          "nullsType" : ""
+        }, {
+          "expression" : {
+            "expression" : "ENCODE(CAST(r_object_id AS string), 'utf-8')",
+            "_row_id" : null
+          },
+          "sortType" : "asc",
+          "nullsType" : ""
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "7bnI4oRTM8PvEpd6vYtWm$$ga_WVzIw4UwItpD3l035F",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "i0EIkHlmlxPu7KXrSkQdP$$6NXiIT_1ZyevukMZWF-yC",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "kPs93rfRYpb9z4MzMDodE$$PYjgEAMsCDVRrq31K3TtB" : {
+      "id" : "kPs93rfRYpb9z4MzMDodE$$PYjgEAMsCDVRrq31K3TtB",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Formula_314",
+        "x" : -100,
+        "y" : -20,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST('\\'http://gdms.pfizer.com/gdms/drl/objectId/\\' + [r_object_id]' AS STRING)",
+            "_row_id" : null
+          },
+          "alias" : "document_url",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "extract_date",
+            "_row_id" : null
+          },
+          "alias" : "extract_date",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "i_chronicle_id",
+            "_row_id" : null
+          },
+          "alias" : "i_chronicle_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "object_name",
+            "_row_id" : null
+          },
+          "alias" : "object_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "sub_country_id",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "sub_country_name",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "subtype",
+            "_row_id" : null
+          },
+          "alias" : "subtype",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "title",
+            "_row_id" : null
+          },
+          "alias" : "title",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "xm_language",
+            "_row_id" : null
+          },
+          "alias" : "xm_language",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "xm_status",
+            "_row_id" : null
+          },
+          "alias" : "xm_status",
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "kpUPvOxWxev0CPEgUS4lZ$$MSi43VzvQOwC17i8KzXTo",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "nOQAsRfCTftuKSIO205SX$$rCmsVEUvowuIZVuZ95bIv",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "rD34bpNEVB9q4KYm5gDTe$$CT1o_HcoiLXlmHOLhXFcQ" : {
+      "id" : "rD34bpNEVB9q4KYm5gDTe$$CT1o_HcoiLXlmHOLhXFcQ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Union_292_reformat_1",
+        "x" : 100,
+        "y" : -20,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "document_url",
+            "_row_id" : null
+          },
+          "alias" : "document_url",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "extract_date",
+            "_row_id" : null
+          },
+          "alias" : "extract_date",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "i_chronicle_id",
+            "_row_id" : null
+          },
+          "alias" : "i_chronicle_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "object_name",
+            "_row_id" : null
+          },
+          "alias" : "object_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "sub_country_id",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "sub_country_name",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "subtype",
+            "_row_id" : null
+          },
+          "alias" : "subtype",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "title",
+            "_row_id" : null
+          },
+          "alias" : "title",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "xm_language",
+            "_row_id" : null
+          },
+          "alias" : "xm_language",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "xm_status",
+            "_row_id" : null
+          },
+          "alias" : "xm_status",
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ckE0VbYcyp07cuD3620IQ$$lIYFA3vdNPb5OLgpfnIwD",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "VgOxeGcf3p-51MFRtaHiD$$rH_66EWl95w1DRue0vc76",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "16HV6BWR3P1y70Mwot7b9$$WJd8iCk44OoAEZsWnQ_Qx" : {
+      "id" : "16HV6BWR3P1y70Mwot7b9$$WJd8iCk44OoAEZsWnQ_Qx",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "1k_aka_gpdip_edlud_302",
+        "x" : -1540,
+        "y" : -760,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "1k_aka_gpdip_edlud_302",
+          "sourceType" : "Table",
+          "sourceName" : "main.rishabh",
+          "alias" : "",
+          "additionalProperties" : null
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "XP03HB7qdE09fKi6KVesy$$T2Quhl6KDbP_tTrbKn8E_",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "yDbRTQsihOuc-LXgEJYCa$$XHi_6nUdslbcMukAfSRv5",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "W1HXwbDZTQSsX_XURgTXp$$1TGWb6s0yKKUWxYiaWKHt" : {
+      "id" : "W1HXwbDZTQSsX_XURgTXp$$1TGWb6s0yKKUWxYiaWKHt",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_306_inner",
+        "x" : -760,
+        "y" : -620,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.r_object_id = in1.r_object_id",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.pfleet_subcountry_row_id",
+            "_row_id" : null
+          },
+          "alias" : "pfleet_subcountry_row_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "fHdLz7Csmnkix5O0V3ums$$a6VsioSpvaCed7on9wmhS",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pfleet_subcountry_row_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "4w2ZultlSn3IlZrrERqC_$$6KcwiRwhmOkyQNULu8tX7",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "KT18RxUZV3CpbeP3cEVFC$$i3cdDi9w9AVV9V4nrdBwd",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pfleet_subcountry_row_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "xk3HyOyZIIgbGnWs7_g9B$$IFwcr6dG4D1VepTNYyIcQ" : {
+      "id" : "xk3HyOyZIIgbGnWs7_g9B$$IFwcr6dG4D1VepTNYyIcQ",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "Sort_304",
+        "x" : -1160,
+        "y" : -520,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "orders" : [ {
+          "expression" : {
+            "expression" : "ENCODE(CAST(r_object_id AS string), 'utf-8')",
+            "_row_id" : null
+          },
+          "sortType" : "asc",
+          "nullsType" : ""
+        }, {
+          "expression" : {
+            "expression" : "ENCODE(CAST(value AS string), 'utf-8')",
+            "_row_id" : null
+          },
+          "sortType" : "asc",
+          "nullsType" : ""
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "p6tx540AyLQJeft927hNe$$OGChhbXt-kru1vrdi1a2L",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "0tc1qBwOLy_Lm_MALloS-$$pYB2A3_L9sNcl5ZSv4Mi6",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "bOfhhR1vVwlfW9M737b9j$$GVj9YC4QbYuZNWilxJtsV" : {
+      "id" : "bOfhhR1vVwlfW9M737b9j$$GVj9YC4QbYuZNWilxJtsV",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_323_reject",
+        "x" : -1360,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "NOT name = 'PFLEET_SUB_COUNTRY_ROW_ID'",
+          "_row_id" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "m7ozKQwMjw02pLT9OJHl8$$2L959vY1CLzlIyzuY-IeW",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "G66tDPQzifaNrwsuVfvQN$$A_jCaflDcjDMbeVcEQyXF",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "zge7W52Vo8l32uottvRat$$40F8b4P13HNF2KjfObK83" : {
+      "id" : "zge7W52Vo8l32uottvRat$$40F8b4P13HNF2KjfObK83",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_327",
+        "x" : -960,
+        "y" : -720,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "i_position",
+            "_row_id" : null
+          },
+          "alias" : "i_position",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "name",
+            "_row_id" : null
+          },
+          "alias" : "name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "CAST(value AS INTEGER)",
+            "_row_id" : null
+          },
+          "alias" : "pfleet_subcountry_row_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BTmD5CkWnxDsFP96FdP2S$$IXO07Wlll20cL0FjBdg3g",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "GFh42zbjYfQi3LgzErw33$$IL7FCcROuyK3duTgNfO14",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pfleet_subcountry_row_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "IE9XzV6UhcQC6EUQw4gi9$$pIj95Ohf4Bg0_ZLtUQ-3_" : {
+      "id" : "IE9XzV6UhcQC6EUQw4gi9$$pIj95Ohf4Bg0_ZLtUQ-3_",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_294",
+        "x" : 700,
+        "y" : -220,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "document_url",
+            "_row_id" : null
+          },
+          "alias" : "document_url",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "extract_date",
+            "_row_id" : null
+          },
+          "alias" : "extract_date",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "i_chronicle_id",
+            "_row_id" : null
+          },
+          "alias" : "i_chronicle_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "object_name",
+            "_row_id" : null
+          },
+          "alias" : "object_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "sub_country_id",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "sub_country_name",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "subtype",
+            "_row_id" : null
+          },
+          "alias" : "subtype",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "title",
+            "_row_id" : null
+          },
+          "alias" : "title",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "xm_language",
+            "_row_id" : null
+          },
+          "alias" : "xm_language",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "xm_status",
+            "_row_id" : null
+          },
+          "alias" : "xm_status",
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "60bmL2Ru170mfqMUfvrfG$$NpDsrmmqUcOLh5Cu170tA",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "H0YTfC4ZBCElJAl-noR2K$$mpe81vUwlWodGMFqvlJlf",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "3yTPdrW0cEZmNBCmrt-uO$$VnLM3_Gcfo4v_a-sGTDiq" : {
+      "id" : "3yTPdrW0cEZmNBCmrt-uO$$VnLM3_Gcfo4v_a-sGTDiq",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "1k_aka_gpdip_edlud_312",
+        "x" : -480,
+        "y" : 40,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "1k_aka_gpdip_edlud_312",
+          "sourceType" : "Table",
+          "sourceName" : "main.rishabh",
+          "alias" : "",
+          "additionalProperties" : null
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8D-riQpShRZP_5NbpZe6N$$vB6f4-fC4cV6FQhUE5GNT",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "aGfBAK5YLDunVipq7nhTa$$DGokabDH0JvwodPZUJy6c",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_has_folder",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "rFPubDwQxu_gGFR7Za6RE$$KkB0NsoUYpZ6SiQSsckDT" : {
+      "id" : "rFPubDwQxu_gGFR7Za6RE$$KkB0NsoUYpZ6SiQSsckDT",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "1k_aka_gpdip_edlud_324",
+        "x" : -1580,
+        "y" : -20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "1k_aka_gpdip_edlud_324",
+          "sourceType" : "Table",
+          "sourceName" : "main.rishabh",
+          "alias" : "",
+          "additionalProperties" : null
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "eP4oEbAx0LEhBtVRRCci4$$qPV0F5DShq-Og4w0eJLQu",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "lmfMZPz8Vi_FufzLxG4mi$$umqT5UdCGb8kvQLqRGbgc",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "C3TAHaOHkAMMH5SgCf-H6$$NMZWuN2K-MqhhIU-YNf19" : {
+      "id" : "C3TAHaOHkAMMH5SgCf-H6$$NMZWuN2K-MqhhIU-YNf19",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "1k_aka_gpdip_edlud_298",
+        "x" : -480,
+        "y" : -300,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "1k_aka_gpdip_edlud_298",
+          "sourceType" : "Table",
+          "sourceName" : "main.rishabh",
+          "alias" : "",
+          "additionalProperties" : null
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gc9EtkaPZvOM6vv52c_2r$$s15U_uzKgGR4FletH19zN",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "t7LyzdAByu-1nVF9f-vp0$$y0twsrQ7iO1H08fgLc4CD",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_has_folder",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "a3BrUrXQaR72IB20IWM2c$$xr-d67wFVbOafiR4R_sle" : {
+      "id" : "a3BrUrXQaR72IB20IWM2c$$xr-d67wFVbOafiR4R_sle",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "1k_aka_gpdip_edlud_289",
+        "x" : -1260,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "1k_aka_gpdip_edlud_289",
+          "sourceType" : "Table",
+          "sourceName" : "main.rishabh",
+          "alias" : "",
+          "additionalProperties" : null
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "a_lwyJ5Q7RdDIT0k44tax$$HHz3iEyYXz3j98bzZ8PHI",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "4-cvLQPcqLtLSH82VmHLO$$KXB6_nTcO1qdnliQ1cvdH",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "is_active",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_static",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "product_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_abbreviation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "VJqBszLJ8G50XmOtKdv0n$$d7mDMcjRaznycHeZn7K1C" : {
+      "id" : "VJqBszLJ8G50XmOtKdv0n$$d7mDMcjRaznycHeZn7K1C",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Summarize_305",
+        "x" : -960,
+        "y" : -520,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "concat_ws(',', collect_list(value))",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : "",
+          "_row_id" : null
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : null,
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "WE-T5KsAs9rL3aeJ-AJ2x$$Rtwts7tJdvSVryIgaHpd9",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "R7P8UIoig873pbt8zJ3Z1$$ZoFytu_xOMYwPnRQegCud",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "P3GtSo3tjK-RG_BuYjuSm$$n4l8jIpkZJqUKkxY-wC9t" : {
+      "id" : "P3GtSo3tjK-RG_BuYjuSm$$n4l8jIpkZJqUKkxY-wC9t",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_318_inner",
+        "x" : -500,
+        "y" : -120,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.app_country_id = in1.pfleet_subcountry_row_id",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.extract_date",
+            "_row_id" : null
+          },
+          "alias" : "extract_date",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.app_country_id",
+            "_row_id" : null
+          },
+          "alias" : "app_country_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.country_name",
+            "_row_id" : null
+          },
+          "alias" : "country_name",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "o5m64J-y8rN6VBdn2UTN4$$86dxOBZwB-KRrORj1NX5F",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "is_active",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_static",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "product_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_abbreviation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "3k4ipcJl750hW3BmLmF21$$8HhZT8eztCDf47liMrarW",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pfleet_subcountry_row_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "IMOZADwCg1U_sb5q1x3F6$$2HcQT08Lqne5_-r7d8r_O",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "nrq6soSQLvgmVueWOjpyV$$rhXCd-n18K613G3LwNuXG" : {
+      "id" : "nrq6soSQLvgmVueWOjpyV$$rhXCd-n18K613G3LwNuXG",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_299_inner",
+        "x" : -300,
+        "y" : -420,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.r_object_id = in1.r_object_id",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in1.subtype",
+            "_row_id" : null
+          },
+          "alias" : "subtype",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.object_name",
+            "_row_id" : null
+          },
+          "alias" : "object_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.extract_date",
+            "_row_id" : null
+          },
+          "alias" : "extract_date",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.xm_status",
+            "_row_id" : null
+          },
+          "alias" : "xm_status",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.xm_language",
+            "_row_id" : null
+          },
+          "alias" : "xm_language",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.app_country_id",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.title",
+            "_row_id" : null
+          },
+          "alias" : "title",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.i_chronicle_id",
+            "_row_id" : null
+          },
+          "alias" : "i_chronicle_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.country_name",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_name",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "GLwAn1OXGZLkL5sFiWaHD$$drWLfbaGo6mZh7bFuTxCf",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "Mn8FyzE_g-XRust_wk0cN$$5rHRc11DvD_9Kq8kq3VzI",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_has_folder",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "wT6XLH_fxSp04zWQKOlo1$$v8Y9JacigmGFAbvjI2YaQ",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "aPEfTBOtlg8V_BW0cmTiS$$aTwIdizQ7GWyhCYCD1we7" : {
+      "id" : "aPEfTBOtlg8V_BW0cmTiS$$aTwIdizQ7GWyhCYCD1we7",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "Sort_316",
+        "x" : -1160,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "orders" : [ {
+          "expression" : {
+            "expression" : "ENCODE(CAST(r_object_id AS string), 'utf-8')",
+            "_row_id" : null
+          },
+          "sortType" : "asc",
+          "nullsType" : ""
+        }, {
+          "expression" : {
+            "expression" : "ENCODE(CAST(value AS string), 'utf-8')",
+            "_row_id" : null
+          },
+          "sortType" : "asc",
+          "nullsType" : ""
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NlG8sTASso3k0p_AN7vam$$sXvp5Y0fuU9OMvEOZ5FE9",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "8i_pXyI4oFBKJP7qKAbft$$_CPhjSsk3ulEGhD5VhQIo",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "LkRPP98NcWsswIkH8LUoZ$$7MRi-Jvqs2YMMGpIaG6iV" : {
+      "id" : "LkRPP98NcWsswIkH8LUoZ$$7MRi-Jvqs2YMMGpIaG6iV",
+      "component" : "DataCleansing",
+      "metadata" : {
+        "label" : "Cleanse_290",
+        "x" : -760,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "trimWhiteSpace" : false,
+        "replaceNullForNumericFields" : false,
+        "cleanLetters" : false,
+        "replaceNullTextWith" : "",
+        "removeRowNullAllCols" : false,
+        "replaceNullTextFields" : false,
+        "relation_name" : [ "1k_aka_gpdip_edlud_289" ],
+        "columnNames" : [ "country_name", "product_name" ],
+        "_oldMacroProperties" : {
+          "macroName" : "DataCleansing",
+          "projectName" : "DatabricksSqlBasics",
+          "parameters" : [ {
+            "name" : "relation_name",
+            "value" : "['1k_aka_gpdip_edlud_289']"
+          }, {
+            "name" : "schema",
+            "value" : "[{\"name\": \"is_active\", \"dataType\": \"String\"}, {\"name\": \"is_static\", \"dataType\": \"String\"}, {\"name\": \"extract_date\", \"dataType\": \"String\"}, {\"name\": \"product_name\", \"dataType\": \"String\"}, {\"name\": \"country_abbreviation\", \"dataType\": \"String\"}, {\"name\": \"app_country_id\", \"dataType\": \"Integer\"}, {\"name\": \"country_name\", \"dataType\": \"String\"}]"
+          }, {
+            "name" : "modifyCase",
+            "value" : "Keep original"
+          }, {
+            "name" : "columnNames",
+            "value" : "[\"country_name\", \"product_name\"]"
+          }, {
+            "name" : "replaceNullTextFields",
+            "value" : "false"
+          }, {
+            "name" : "replaceNullTextWith",
+            "value" : ""
+          }, {
+            "name" : "replaceNullForNumericFields",
+            "value" : "false"
+          }, {
+            "name" : "replaceNullNumericWith",
+            "value" : "0"
+          }, {
+            "name" : "trimWhiteSpace",
+            "value" : "false"
+          }, {
+            "name" : "removeTabsLineBreaksAndDuplicateWhitespace",
+            "value" : "false"
+          }, {
+            "name" : "allWhiteSpace",
+            "value" : "false"
+          }, {
+            "name" : "cleanLetters",
+            "value" : "false"
+          }, {
+            "name" : "cleanPunctuations",
+            "value" : "false"
+          }, {
+            "name" : "cleanNumbers",
+            "value" : "false"
+          }, {
+            "name" : "removeRowNullAllCols",
+            "value" : "false"
+          } ]
+        },
+        "schema" : "[{\"name\": \"is_active\", \"dataType\": \"String\"}, {\"name\": \"is_static\", \"dataType\": \"String\"}, {\"name\": \"extract_date\", \"dataType\": \"String\"}, {\"name\": \"product_name\", \"dataType\": \"String\"}, {\"name\": \"country_abbreviation\", \"dataType\": \"String\"}, {\"name\": \"app_country_id\", \"dataType\": \"Integer\"}, {\"name\": \"country_name\", \"dataType\": \"String\"}]",
+        "allWhiteSpace" : false,
+        "removeTabsLineBreaksAndDuplicateWhitespace" : false,
+        "modifyCase" : "Keep original",
+        "cleanPunctuations" : false,
+        "cleanNumbers" : false,
+        "replaceNullNumericWith" : 0
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CtG4KCmsJja8pfNt9kADf$$n3RVj5NxoR81mnIwjeHPm",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "is_active",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_static",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "product_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_abbreviation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "-lgbKSNmOnFO4XwKRBbwj$$zCllQNj_uzD49FuUea9sD",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "is_active",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_static",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "product_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_abbreviation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : true
+      },
+      "componentInfo" : {
+        "gemId" : "DataCleansing_DatabricksSqlBasics",
+        "name" : "DataCleansing",
+        "projectName" : "DatabricksSqlBasics",
+        "sourceProjectName" : "DatabricksSqlBasics"
+      }
+    },
+    "eRciHFeoeAjVAIdEPUb2o$$s653tZcU3dGFAdRZ9xVpZ" : {
+      "id" : "eRciHFeoeAjVAIdEPUb2o$$s653tZcU3dGFAdRZ9xVpZ",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_323",
+        "x" : -1360,
+        "y" : -120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "name = 'PFLEET_SUB_COUNTRY_ROW_ID'",
+          "_row_id" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bZYIjZzj8tqC5OXcvrp6B$$kIJ25KsLSAvwyqdwpHXjx",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "su_FaYEkgVv5QErMdHHqS$$W_r9sZ9eYssM0RXb3tEar",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "xH2bNiWxCCvmhhlU1S71B$$EQBBlVEI1YWoqpxcRKVxx" : {
+      "id" : "xH2bNiWxCCvmhhlU1S71B$$EQBBlVEI1YWoqpxcRKVxx",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_322_inner",
+        "x" : -760,
+        "y" : -20,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.r_object_id = in1.r_object_id",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.pfleet_subcountry_row_id",
+            "_row_id" : null
+          },
+          "alias" : "pfleet_subcountry_row_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SRG77Xbwy5aiM45MjSLI4$$60Zs0QMmOsLy5vG7hUJkW",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pfleet_subcountry_row_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "OtAXS79DZHbv1cisbAEIa$$P1jB5n9ve_hAQ6ifRmMeh",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "W2ZSsIx7GIXcA9KTa_Mua$$YR4aDdOLN4YaSNKWeT5qU",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "pfleet_subcountry_row_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "OdUAkMhS0a4wnDyNqIW8T$$UXpdp3X8e-xXkKKfYLx4g" : {
+      "id" : "OdUAkMhS0a4wnDyNqIW8T$$UXpdp3X8e-xXkKKfYLx4g",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_303_reject",
+        "x" : -1360,
+        "y" : -520,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "NOT name = 'PFLEET_SUB_COUNTRY_ROW_ID'",
+          "_row_id" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OAU5yhKLa3EzrodaLalq9$$8lEKw9i719x2BL0YpEOzy",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "d45v-3y-r7WkBOTyS84c3$$4n3uP9bbsTG1CHr6MyBWa",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "fv2hjXkFmdwctj-lFs5aB$$qnT6KOrWN_t3YvsLUXtvE" : {
+      "id" : "fv2hjXkFmdwctj-lFs5aB$$qnT6KOrWN_t3YvsLUXtvE",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_313_inner",
+        "x" : -300,
+        "y" : -20,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.r_object_id = in1.r_object_id",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in1.subtype",
+            "_row_id" : null
+          },
+          "alias" : "subtype",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.object_name",
+            "_row_id" : null
+          },
+          "alias" : "object_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.extract_date",
+            "_row_id" : null
+          },
+          "alias" : "extract_date",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.xm_status",
+            "_row_id" : null
+          },
+          "alias" : "xm_status",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.xm_language",
+            "_row_id" : null
+          },
+          "alias" : "xm_language",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.app_country_id",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.title",
+            "_row_id" : null
+          },
+          "alias" : "title",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.i_chronicle_id",
+            "_row_id" : null
+          },
+          "alias" : "i_chronicle_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.country_name",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_name",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6YYzL2jvz-CxJHDHsmwFS$$bKzF_kdL5vchceolJWzjG",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "Xsj1NH5xPy429GtBqowd6$$KwXxSOROHch9vdhj7vKM4",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_has_folder",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "5q1xUT2blYWjLWTdcISCo$$N9g9S_dW1-EK3IwM47UX2",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "3ky_klbHhw7-WI3KLl5jg$$oKFQfH6ooI_BN3FnOV6aV" : {
+      "id" : "3ky_klbHhw7-WI3KLl5jg$$oKFQfH6ooI_BN3FnOV6aV",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Union_292_reformat_0",
+        "x" : 100,
+        "y" : -420,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "document_url",
+            "_row_id" : null
+          },
+          "alias" : "document_url",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "extract_date",
+            "_row_id" : null
+          },
+          "alias" : "extract_date",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "i_chronicle_id",
+            "_row_id" : null
+          },
+          "alias" : "i_chronicle_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "object_name",
+            "_row_id" : null
+          },
+          "alias" : "object_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "sub_country_id",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "sub_country_name",
+            "_row_id" : null
+          },
+          "alias" : "sub_country_name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "subtype",
+            "_row_id" : null
+          },
+          "alias" : "subtype",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "title",
+            "_row_id" : null
+          },
+          "alias" : "title",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "xm_language",
+            "_row_id" : null
+          },
+          "alias" : "xm_language",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "xm_status",
+            "_row_id" : null
+          },
+          "alias" : "xm_status",
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Z3JJFaRdojKX1tc_nd2L4$$1VlGCweUpj-pGMwp7_07N",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "cRVGvaHtOt_KAnS08Y2vJ$$n7EmDfsqvFKp0_U3J4dMh",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "document_url",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_version_label",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "sub_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "sub_country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "sCm5QLnr4sKlEjAyZKcaQ",
+    "source" : "5kQ3HBGgCTtj2ksOJR3P1$$DmwLPaApcdMSbRHsMFrRE",
+    "sourcePort" : "YeDSK4fuvYV6R1gzjVGPf$$qiZNnV9xMbZF2HTpXAIwI",
+    "target" : "eA4IujEBA-jsWES6XyDI6$$Oq-69O7Aw823vgw2QyxL7",
+    "targetPort" : "7bnI4oRTM8PvEpd6vYtWm$$ga_WVzIw4UwItpD3l035F"
+  }, {
+    "id" : "9t8nk7z1iK9iwxBJoKmHL",
+    "source" : "eA4IujEBA-jsWES6XyDI6$$Oq-69O7Aw823vgw2QyxL7",
+    "sourcePort" : "i0EIkHlmlxPu7KXrSkQdP$$6NXiIT_1ZyevukMZWF-yC",
+    "target" : "IE9XzV6UhcQC6EUQw4gi9$$pIj95Ohf4Bg0_ZLtUQ-3_",
+    "targetPort" : "60bmL2Ru170mfqMUfvrfG$$NpDsrmmqUcOLh5Cu170tA"
+  }, {
+    "id" : "8SF9js6yOT_ZpHq_G2CSi",
+    "source" : "xk3HyOyZIIgbGnWs7_g9B$$IFwcr6dG4D1VepTNYyIcQ",
+    "sourcePort" : "0tc1qBwOLy_Lm_MALloS-$$pYB2A3_L9sNcl5ZSv4Mi6",
+    "target" : "VJqBszLJ8G50XmOtKdv0n$$d7mDMcjRaznycHeZn7K1C",
+    "targetPort" : "WE-T5KsAs9rL3aeJ-AJ2x$$Rtwts7tJdvSVryIgaHpd9"
+  }, {
+    "id" : "uXqVqWMWm2eBuuBw1Yp1T",
+    "source" : "aPEfTBOtlg8V_BW0cmTiS$$aTwIdizQ7GWyhCYCD1we7",
+    "sourcePort" : "8i_pXyI4oFBKJP7qKAbft$$_CPhjSsk3ulEGhD5VhQIo",
+    "target" : "i0jZFXRxMvBP2FxgjqzX6$$nO-EYblQnGA663TGwq2y9",
+    "targetPort" : "oXAY2B8NDE5e75oCrcqW7$$WLsNqqYoVYr4BoLY1E75w"
+  }, {
+    "id" : "KFphBRVsIAcWOprmicigR",
+    "source" : "OdUAkMhS0a4wnDyNqIW8T$$UXpdp3X8e-xXkKKfYLx4g",
+    "sourcePort" : "d45v-3y-r7WkBOTyS84c3$$4n3uP9bbsTG1CHr6MyBWa",
+    "target" : "xk3HyOyZIIgbGnWs7_g9B$$IFwcr6dG4D1VepTNYyIcQ",
+    "targetPort" : "p6tx540AyLQJeft927hNe$$OGChhbXt-kru1vrdi1a2L"
+  }, {
+    "id" : "zmZJYBXoE1fi3f5YP4KyS",
+    "source" : "YPpYmqOTlKJqLokPmPY5P$$D9qcuhUIgTZXisfMR3h2t",
+    "sourcePort" : "53-zjJyghOPpNeZUdF30c$$OmS2cd5qPGNDosPDfQOzo",
+    "target" : "zge7W52Vo8l32uottvRat$$40F8b4P13HNF2KjfObK83",
+    "targetPort" : "BTmD5CkWnxDsFP96FdP2S$$IXO07Wlll20cL0FjBdg3g"
+  }, {
+    "id" : "4OO0ZaDU9Hsy7TBAvSkgd",
+    "source" : "bOfhhR1vVwlfW9M737b9j$$GVj9YC4QbYuZNWilxJtsV",
+    "sourcePort" : "G66tDPQzifaNrwsuVfvQN$$A_jCaflDcjDMbeVcEQyXF",
+    "target" : "aPEfTBOtlg8V_BW0cmTiS$$aTwIdizQ7GWyhCYCD1we7",
+    "targetPort" : "NlG8sTASso3k0p_AN7vam$$sXvp5Y0fuU9OMvEOZ5FE9"
+  }, {
+    "id" : "h9AgX4jT2Ekxy-mgNxo5x",
+    "source" : "eRciHFeoeAjVAIdEPUb2o$$s653tZcU3dGFAdRZ9xVpZ",
+    "sourcePort" : "su_FaYEkgVv5QErMdHHqS$$W_r9sZ9eYssM0RXb3tEar",
+    "target" : "AYpNsR2_VlcShxr6-jXlF$$aOO3whGW0y69VI9EKqDtw",
+    "targetPort" : "hoCOv0KkqK1_wBzDHaMKk$$DKlUY95xTJjNyMK4w6waX"
+  }, {
+    "id" : "w5ylfI8nMQ9jMnO-N7J-N",
+    "source" : "nrq6soSQLvgmVueWOjpyV$$rhXCd-n18K613G3LwNuXG",
+    "sourcePort" : "wT6XLH_fxSp04zWQKOlo1$$v8Y9JacigmGFAbvjI2YaQ",
+    "target" : "D6NY94iMBCoK2TFctUAcA$$GvcByMislQHbo_XO1I5qf",
+    "targetPort" : "mUIfw1GaXgpnY_Z0Z0ozn$$MaDRbJBLY5O6jIiVF6Msk"
+  }, {
+    "id" : "p5fbbPUSEI8xDPSo1RxW3",
+    "source" : "VJqBszLJ8G50XmOtKdv0n$$d7mDMcjRaznycHeZn7K1C",
+    "sourcePort" : "R7P8UIoig873pbt8zJ3Z1$$ZoFytu_xOMYwPnRQegCud",
+    "target" : "W1HXwbDZTQSsX_XURgTXp$$1TGWb6s0yKKUWxYiaWKHt",
+    "targetPort" : "4w2ZultlSn3IlZrrERqC_$$6KcwiRwhmOkyQNULu8tX7"
+  }, {
+    "id" : "wurOW9cM7b5Qn48dxWlAA",
+    "source" : "zge7W52Vo8l32uottvRat$$40F8b4P13HNF2KjfObK83",
+    "sourcePort" : "GFh42zbjYfQi3LgzErw33$$IL7FCcROuyK3duTgNfO14",
+    "target" : "W1HXwbDZTQSsX_XURgTXp$$1TGWb6s0yKKUWxYiaWKHt",
+    "targetPort" : "fHdLz7Csmnkix5O0V3ums$$a6VsioSpvaCed7on9wmhS"
+  }, {
+    "id" : "Ls__DIWNbMKRsn4USBazB",
+    "source" : "LkRPP98NcWsswIkH8LUoZ$$7MRi-Jvqs2YMMGpIaG6iV",
+    "sourcePort" : "-lgbKSNmOnFO4XwKRBbwj$$zCllQNj_uzD49FuUea9sD",
+    "target" : "orhEzAnIfeIWtzPH8efsf$$sYj9NIW8TZxe3IzaZVCbo",
+    "targetPort" : "IOAc-DzwsiLoCTWXi1d2K$$hFF2L9MpmERdoTBQMTk5M"
+  }, {
+    "id" : "Y2XlVJGCHZUS5hr4vlDwm",
+    "source" : "W1HXwbDZTQSsX_XURgTXp$$1TGWb6s0yKKUWxYiaWKHt",
+    "sourcePort" : "KT18RxUZV3CpbeP3cEVFC$$i3cdDi9w9AVV9V4nrdBwd",
+    "target" : "orhEzAnIfeIWtzPH8efsf$$sYj9NIW8TZxe3IzaZVCbo",
+    "targetPort" : "iRHLTwrbzoeX6RdHB3V3j$$Pw-ilRUp-PU-oGb1XOQuB"
+  }, {
+    "id" : "sqQ0dQhGfgNICGK62KUsc",
+    "source" : "orhEzAnIfeIWtzPH8efsf$$sYj9NIW8TZxe3IzaZVCbo",
+    "sourcePort" : "7OoUl-_glWlvZ18LSJHZg$$lkvF6B9lIjv1D6uxxQGqo",
+    "target" : "nrq6soSQLvgmVueWOjpyV$$rhXCd-n18K613G3LwNuXG",
+    "targetPort" : "GLwAn1OXGZLkL5sFiWaHD$$drWLfbaGo6mZh7bFuTxCf"
+  }, {
+    "id" : "BmRfCU77Y3cufWJw-Gi4e",
+    "source" : "fv2hjXkFmdwctj-lFs5aB$$qnT6KOrWN_t3YvsLUXtvE",
+    "sourcePort" : "5q1xUT2blYWjLWTdcISCo$$N9g9S_dW1-EK3IwM47UX2",
+    "target" : "kPs93rfRYpb9z4MzMDodE$$PYjgEAMsCDVRrq31K3TtB",
+    "targetPort" : "kpUPvOxWxev0CPEgUS4lZ$$MSi43VzvQOwC17i8KzXTo"
+  }, {
+    "id" : "Jxo8TfhMp7S1TNDrlesyA",
+    "source" : "LkRPP98NcWsswIkH8LUoZ$$7MRi-Jvqs2YMMGpIaG6iV",
+    "sourcePort" : "-lgbKSNmOnFO4XwKRBbwj$$zCllQNj_uzD49FuUea9sD",
+    "target" : "P3GtSo3tjK-RG_BuYjuSm$$n4l8jIpkZJqUKkxY-wC9t",
+    "targetPort" : "o5m64J-y8rN6VBdn2UTN4$$86dxOBZwB-KRrORj1NX5F"
+  }, {
+    "id" : "oap6-TGvFuJz-9dZFTk8F",
+    "source" : "P3GtSo3tjK-RG_BuYjuSm$$n4l8jIpkZJqUKkxY-wC9t",
+    "sourcePort" : "IMOZADwCg1U_sb5q1x3F6$$2HcQT08Lqne5_-r7d8r_O",
+    "target" : "fv2hjXkFmdwctj-lFs5aB$$qnT6KOrWN_t3YvsLUXtvE",
+    "targetPort" : "6YYzL2jvz-CxJHDHsmwFS$$bKzF_kdL5vchceolJWzjG"
+  }, {
+    "id" : "DqulBW3NsFrySSFjkJ8_j",
+    "source" : "i0jZFXRxMvBP2FxgjqzX6$$nO-EYblQnGA663TGwq2y9",
+    "sourcePort" : "QV_2-5_XHYQb8UOopXFyY$$FY3v46At7W6CNxoAvNb_c",
+    "target" : "xH2bNiWxCCvmhhlU1S71B$$EQBBlVEI1YWoqpxcRKVxx",
+    "targetPort" : "OtAXS79DZHbv1cisbAEIa$$P1jB5n9ve_hAQ6ifRmMeh"
+  }, {
+    "id" : "fy5TF99o93DLxL6VKlsXK",
+    "source" : "AYpNsR2_VlcShxr6-jXlF$$aOO3whGW0y69VI9EKqDtw",
+    "sourcePort" : "7DiP246fCT0pYhLxNqe6h$$DJrqAo8GxcC635sY24Fmb",
+    "target" : "xH2bNiWxCCvmhhlU1S71B$$EQBBlVEI1YWoqpxcRKVxx",
+    "targetPort" : "SRG77Xbwy5aiM45MjSLI4$$60Zs0QMmOsLy5vG7hUJkW"
+  }, {
+    "id" : "gdmfbTIeE4kBXquCYKy3D",
+    "source" : "xH2bNiWxCCvmhhlU1S71B$$EQBBlVEI1YWoqpxcRKVxx",
+    "sourcePort" : "W2ZSsIx7GIXcA9KTa_Mua$$YR4aDdOLN4YaSNKWeT5qU",
+    "target" : "P3GtSo3tjK-RG_BuYjuSm$$n4l8jIpkZJqUKkxY-wC9t",
+    "targetPort" : "3k4ipcJl750hW3BmLmF21$$8HhZT8eztCDf47liMrarW"
+  }, {
+    "id" : "x6h7h5NQ2hyyq90Tu-he7",
+    "source" : "D6NY94iMBCoK2TFctUAcA$$GvcByMislQHbo_XO1I5qf",
+    "sourcePort" : "uHNny_j2fbPeMgBBDg5iW$$t2VD707fncqSwbaEi7-6O",
+    "target" : "3ky_klbHhw7-WI3KLl5jg$$oKFQfH6ooI_BN3FnOV6aV",
+    "targetPort" : "Z3JJFaRdojKX1tc_nd2L4$$1VlGCweUpj-pGMwp7_07N"
+  }, {
+    "id" : "I0Kbyreg_njRTcSc9H5_f",
+    "source" : "3ky_klbHhw7-WI3KLl5jg$$oKFQfH6ooI_BN3FnOV6aV",
+    "sourcePort" : "cRVGvaHtOt_KAnS08Y2vJ$$n7EmDfsqvFKp0_U3J4dMh",
+    "target" : "5kQ3HBGgCTtj2ksOJR3P1$$DmwLPaApcdMSbRHsMFrRE",
+    "targetPort" : "VlEhnvnYUUpsZt2XeV2_8$$mItBiZPNISzoY4uxb_5XC"
+  }, {
+    "id" : "oIWDCz3ZG6gW9scvUYOoO",
+    "source" : "kPs93rfRYpb9z4MzMDodE$$PYjgEAMsCDVRrq31K3TtB",
+    "sourcePort" : "nOQAsRfCTftuKSIO205SX$$rCmsVEUvowuIZVuZ95bIv",
+    "target" : "rD34bpNEVB9q4KYm5gDTe$$CT1o_HcoiLXlmHOLhXFcQ",
+    "targetPort" : "ckE0VbYcyp07cuD3620IQ$$lIYFA3vdNPb5OLgpfnIwD"
+  }, {
+    "id" : "7ejRu7u42t-hB5wHjNxee",
+    "source" : "rD34bpNEVB9q4KYm5gDTe$$CT1o_HcoiLXlmHOLhXFcQ",
+    "sourcePort" : "VgOxeGcf3p-51MFRtaHiD$$rH_66EWl95w1DRue0vc76",
+    "target" : "5kQ3HBGgCTtj2ksOJR3P1$$DmwLPaApcdMSbRHsMFrRE",
+    "targetPort" : "bqGfofKt-uNP0ac0-JOo7$$7-XYhKXlrOZTz_F-8DQEX"
+  }, {
+    "id" : "miVEFMox3HKeinJj8wgfG",
+    "source" : "16HV6BWR3P1y70Mwot7b9$$WJd8iCk44OoAEZsWnQ_Qx",
+    "sourcePort" : "yDbRTQsihOuc-LXgEJYCa$$XHi_6nUdslbcMukAfSRv5",
+    "target" : "YPpYmqOTlKJqLokPmPY5P$$D9qcuhUIgTZXisfMR3h2t",
+    "targetPort" : "9eljGiu33JrXl_TZsIWSL$$uXVIMrkit1WjZvfn_hx7s"
+  }, {
+    "id" : "ABW7hP_U6q_ZDeJPsuhd0",
+    "source" : "16HV6BWR3P1y70Mwot7b9$$WJd8iCk44OoAEZsWnQ_Qx",
+    "sourcePort" : "yDbRTQsihOuc-LXgEJYCa$$XHi_6nUdslbcMukAfSRv5",
+    "target" : "OdUAkMhS0a4wnDyNqIW8T$$UXpdp3X8e-xXkKKfYLx4g",
+    "targetPort" : "OAU5yhKLa3EzrodaLalq9$$8lEKw9i719x2BL0YpEOzy"
+  }, {
+    "id" : "2TXK_gMzONZE-R2e4Yrlb",
+    "source" : "a3BrUrXQaR72IB20IWM2c$$xr-d67wFVbOafiR4R_sle",
+    "sourcePort" : "4-cvLQPcqLtLSH82VmHLO$$KXB6_nTcO1qdnliQ1cvdH",
+    "target" : "LkRPP98NcWsswIkH8LUoZ$$7MRi-Jvqs2YMMGpIaG6iV",
+    "targetPort" : "CtG4KCmsJja8pfNt9kADf$$n3RVj5NxoR81mnIwjeHPm"
+  }, {
+    "id" : "OoIELaWcEknJXqZTnknxA",
+    "source" : "C3TAHaOHkAMMH5SgCf-H6$$NMZWuN2K-MqhhIU-YNf19",
+    "sourcePort" : "t7LyzdAByu-1nVF9f-vp0$$y0twsrQ7iO1H08fgLc4CD",
+    "target" : "nrq6soSQLvgmVueWOjpyV$$rhXCd-n18K613G3LwNuXG",
+    "targetPort" : "Mn8FyzE_g-XRust_wk0cN$$5rHRc11DvD_9Kq8kq3VzI"
+  }, {
+    "id" : "RMZVg0FVKDQiVYLWDLQbt",
+    "source" : "rFPubDwQxu_gGFR7Za6RE$$KkB0NsoUYpZ6SiQSsckDT",
+    "sourcePort" : "lmfMZPz8Vi_FufzLxG4mi$$umqT5UdCGb8kvQLqRGbgc",
+    "target" : "eRciHFeoeAjVAIdEPUb2o$$s653tZcU3dGFAdRZ9xVpZ",
+    "targetPort" : "bZYIjZzj8tqC5OXcvrp6B$$kIJ25KsLSAvwyqdwpHXjx"
+  }, {
+    "id" : "04LChkoBagbqtjJ6f9fk5",
+    "source" : "rFPubDwQxu_gGFR7Za6RE$$KkB0NsoUYpZ6SiQSsckDT",
+    "sourcePort" : "lmfMZPz8Vi_FufzLxG4mi$$umqT5UdCGb8kvQLqRGbgc",
+    "target" : "bOfhhR1vVwlfW9M737b9j$$GVj9YC4QbYuZNWilxJtsV",
+    "targetPort" : "m7ozKQwMjw02pLT9OJHl8$$2L959vY1CLzlIyzuY-IeW"
+  }, {
+    "id" : "4wxxI6JAWMWIAlj3QsbzG$$R4rFCC35pIsrHP0nQ_tc1",
+    "source" : "3yTPdrW0cEZmNBCmrt-uO$$VnLM3_Gcfo4v_a-sGTDiq",
+    "sourcePort" : "aGfBAK5YLDunVipq7nhTa$$DGokabDH0JvwodPZUJy6c",
+    "target" : "fv2hjXkFmdwctj-lFs5aB$$qnT6KOrWN_t3YvsLUXtvE",
+    "targetPort" : "Xsj1NH5xPy429GtBqowd6$$KwXxSOROHch9vdhj7vKM4"
+  }, {
+    "id" : "ZaUZ8oyghdWn4_DyrGuGG$$PZzGH-FykkTJG0G-oTyfk",
+    "source" : "IE9XzV6UhcQC6EUQw4gi9$$pIj95Ohf4Bg0_ZLtUQ-3_",
+    "sourcePort" : "H0YTfC4ZBCElJAl-noR2K$$mpe81vUwlWodGMFqvlJlf",
+    "target" : "Ma1e7h4Eeh25V5H65TLRh$$VPx97wqbb2u4K83dKvk_S",
+    "targetPort" : "-8uiLNtI7xM36dGmEC2bt$$RsDDsenU-nZsKt1iA-GOT"
+  } ],
+  "component" : "Pipeline"
+}

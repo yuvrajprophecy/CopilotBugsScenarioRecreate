@@ -1,0 +1,1468 @@
+{
+  "id" : "test_pipeline",
+  "metainfo" : {
+    "label" : "test_pipeline",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    }
+  },
+  "processes" : {
+    "prophecy__temp_test_pipeline_pre_Cleanse_290_0" : {
+      "id" : "prophecy__temp_test_pipeline_pre_Cleanse_290_0",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_289",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_test_pipeline_pre_Cleanse_290_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_test_pipeline_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0_1",
+          "slug" : "input_port_0_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0_1",
+          "slug" : "output_port_0_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "GqnlKbCRYYhffGoqOovp2$$r-dh76ayi-bsCiZGuEyEJ" : {
+      "id" : "GqnlKbCRYYhffGoqOovp2$$r-dh76ayi-bsCiZGuEyEJ",
+      "component" : "OrchestrationSource",
+      "kind" : "DatabricksSource",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_302",
+        "x" : -1140,
+        "y" : -220,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "id" : "transpiled_connection",
+          "kind" : "databricks",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "dev-test",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "category" : "table",
+          "kind" : "databricks",
+          "properties" : {
+            "kind" : "databricks",
+            "properties" : { }
+          }
+        },
+        "properties" : {
+          "tableFullName" : {
+            "database" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "main"
+                  }
+                } ]
+              }
+            },
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "rishabh"
+                  }
+                } ]
+              }
+            },
+            "name" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "aka_GPDIP_EDLUD_302"
+                  }
+                } ]
+              }
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "oFYy4kwxo42s1WUGHK0Cu$$BrjAT31j7PfvI-oe8czTk",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "8QGupWGncxyagtgz-OBTb$$vcGm2rPs2yN70VnlnuT6A" : {
+      "id" : "8QGupWGncxyagtgz-OBTb$$vcGm2rPs2yN70VnlnuT6A",
+      "component" : "OrchestrationSource",
+      "kind" : "SFTPSource",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_312",
+        "x" : -80,
+        "y" : 480,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : "aka_GPDIP_EDLUD_312.xlsx"
+        },
+        "format" : {
+          "kind" : "xlsx",
+          "properties" : {
+            "schema" : {
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "subtype",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "object_name",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "xm_status",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "i_has_folder",
+                "dataType" : {
+                  "type" : "int32"
+                }
+              }, {
+                "name" : "xm_language",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "r_object_id",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "title",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "i_chronicle_id",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "YXdgCGrdyBjH1r1YfgMxm$$qnXsF4S202kh9aou2bIB3",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_has_folder",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "prophecy__temp_test_pipeline_pre_Join_299_inner_0" : {
+      "id" : "prophecy__temp_test_pipeline_pre_Join_299_inner_0",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_298",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_test_pipeline_pre_Join_299_inner_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_test_pipeline_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_6_1",
+          "slug" : "input_port_6_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_6_1",
+          "slug" : "output_port_6_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Ol6KduY0NM6ft9ymav_LF$$pvCWQAVpeVB9G71G7sAjG" : {
+      "id" : "Ol6KduY0NM6ft9ymav_LF$$pvCWQAVpeVB9G71G7sAjG",
+      "component" : "OrchestrationSource",
+      "kind" : "SFTPSource",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_324",
+        "x" : -1140,
+        "y" : 380,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : "aka_GPDIP_EDLUD_324.xlsx"
+        },
+        "format" : {
+          "kind" : "xlsx",
+          "properties" : {
+            "schema" : {
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "r_object_id",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "i_position",
+                "dataType" : {
+                  "type" : "int32"
+                }
+              }, {
+                "name" : "name",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "value",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "vvJkEYNfB2ffg3wgdxomx$$CdVETD61CuCI6A7Y8RaJQ",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "H1ZUHBIonkSD6dvHt4tdC$$vnJhfw-axFLjUfKsiZauT" : {
+      "id" : "H1ZUHBIonkSD6dvHt4tdC$$vnJhfw-axFLjUfKsiZauT",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_test_pipeline_Join_318_inner",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_test_pipeline_Join_318_inner"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_test_pipeline_pre_Join_313_inner_1", "H1ZUHBIonkSD6dvHt4tdC$$vnJhfw-axFLjUfKsiZauT", "prophecy__temp_test_pipeline_post_Cleanse_290_0", "q_w2NDLPuY7j8tLsrd-md$$Wzt21Dr-KvTiu4CkLDOCR", "nm-uLHM-wqvaDR-zgPbCx$$hw1tElFG5CUuKFF9Yv9gi", "EajCmMAiSusjZu7Aom398$$rTSWc4p1pQoyUPKbVmuAo", "5_gLiOZTSIM5ol1D4chp4$$Mms2Sr6pUi9SmRg4im3W0", "R296zmI2Ag4ZakZ09DT1R$$5gFokgEGoxXcaSNrpNAHg", "prophecy__temp_test_pipeline_pre_Filter_323_reject_0", "H2I18L7YRleZhXcXmjIqs$$JmnD4phAtSyGY2hRFFkT5", "prophecy__temp_test_pipeline_pre_Filter_323_reject_0" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_test_pipeline_Join_318_inner_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "model_test_pipeline_Join_318_inner_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "model_test_pipeline_Join_318_inner_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "model_test_pipeline_Join_318_inner_in_3",
+          "slug" : "in_3"
+        } ],
+        "outputs" : [ {
+          "id" : "model_test_pipeline_Join_318_inner_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "bDg5UZAZUcMrVIQsXcKkv$$34VDAqfzuJfGpS_jzJjuI" : {
+      "id" : "bDg5UZAZUcMrVIQsXcKkv$$34VDAqfzuJfGpS_jzJjuI",
+      "component" : "OrchestrationSource",
+      "kind" : "DatabricksSource",
+      "metadata" : {
+        "label" : "unstructured_output_databricks_1",
+        "x" : -840,
+        "y" : -540,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "databricks",
+          "properties" : {
+            "id" : "dev-test"
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "tableFullName" : {
+            "database" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "main"
+                  }
+                } ]
+              }
+            },
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "rishabh"
+                  }
+                } ]
+              }
+            },
+            "name" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "aka_gpdip_edlud_302"
+                  }
+                } ]
+              }
+            }
+          }
+        },
+        "format" : {
+          "properties" : {
+            "description" : "Categorical data capturing values and their corresponding names, positions, and object identifiers for analytical purposes.",
+            "schema" : {
+              "providerType" : "Arrow",
+              "fields" : [ {
+                "name" : "r_object_id",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "Unique identifier for the object represented as a string"
+              }, {
+                "name" : "i_position",
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "The position index of the object in a sequence"
+              }, {
+                "name" : "name",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "The name associated with the object"
+              }, {
+                "name" : "value",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "The value associated with the object"
+              } ]
+            },
+            "properties" : { },
+            "additionalProperties" : {
+              "copilot" : {
+                "datasetDescriptionStatus" : "fromCopilot"
+              }
+            },
+            "kind" : "databricks"
+          },
+          "kind" : "databricks",
+          "category" : "table"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "TkAn8o4IulZQoc6XwI0Fv$$1VCaXZN-TiOo76TSrdH4x",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "yb3J0-GsVyhgdhIUXS4kv$$7moejq5P8HOuutz_GUqpI" : {
+      "id" : "yb3J0-GsVyhgdhIUXS4kv$$7moejq5P8HOuutz_GUqpI",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "x" : 160,
+        "y" : -460,
+        "phase" : 0
+      },
+      "properties" : {
+        "ports" : null,
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "return out0",
+        "script" : ""
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "J2tWZr1W0FOMkc-cxr_tc$$nAA2nRaroByheiMAijKt4",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "VdNf2lIAL24CvC1X5oRg0$$r722huMITpwgY0EZOY6Ts",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "1c7tek_tG0EVHzIVZSwoR$$q4kzMWFwWwdgPy5uY5LtF" : {
+      "id" : "1c7tek_tG0EVHzIVZSwoR$$q4kzMWFwWwdgPy5uY5LtF",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_test_pipeline_AlteryxSelect_294",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_test_pipeline_AlteryxSelect_294"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_test_pipeline_post_AlteryxSelect_294_0", "1c7tek_tG0EVHzIVZSwoR$$q4kzMWFwWwdgPy5uY5LtF", "FTRXmqxpU1gTE_KbSpodD$$XuoQUAnWw3uxkPfiObXuH", "tOukPcDjZxlHJwuEHqspd$$aTX7h8YZzwhS60RpJ5LyG", "KXcW0jQoPfoM9aQyN5E55$$MWUh3q65hIfC2mvGEazGB", "O40Oh_cGtOqEmYpwowG0y$$YFIjIkhbSGe5lJwSeJUdt", "xHOsFRkdP_TFxyHvYW7ZR$$njm0Ig7AcsXHokXOGDZyA", "4rbfIZXdgmHj1awmjCBeS$$QCSktb1EcHSMW4lUpsjeg", "vGx4kFyyuIDmmMpped68-$$dP3Zxforu8VGBXhJiaCla", "prophecy__temp_test_pipeline_pre_Join_299_inner_0", "prophecy__temp_test_pipeline_pre_Join_299_inner_1", "vmRNbYijzXEcgkgmL4XnL$$YL9QEl1UbQ11LQ6FarCp2", "prophecy__temp_test_pipeline_pre_Join_313_inner_0", "prophecy__temp_test_pipeline_pre_Join_313_inner_1" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_test_pipeline_AlteryxSelect_294_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "model_test_pipeline_AlteryxSelect_294_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "model_test_pipeline_AlteryxSelect_294_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "model_test_pipeline_AlteryxSelect_294_in_3",
+          "slug" : "in_3"
+        } ],
+        "outputs" : [ {
+          "id" : "model_test_pipeline_AlteryxSelect_294_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "prophecy__temp_test_pipeline_pre_Filter_303_reject_0" : {
+      "id" : "prophecy__temp_test_pipeline_pre_Filter_303_reject_0",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_302",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_test_pipeline_pre_Filter_303_reject_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_test_pipeline_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_5_1",
+          "slug" : "input_port_5_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_5_1",
+          "slug" : "output_port_5_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "2s_5T04fBCP5BcmZ4LcuQ$$fNKnRQV_dArePx7PvU0ER" : {
+      "id" : "2s_5T04fBCP5BcmZ4LcuQ$$fNKnRQV_dArePx7PvU0ER",
+      "component" : "OrchestrationSource",
+      "kind" : "SFTPSource",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_298",
+        "x" : -80,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : "aka_GPDIP_EDLUD_298.xlsx"
+        },
+        "format" : {
+          "kind" : "xlsx",
+          "properties" : {
+            "schema" : {
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "subtype",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "object_name",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "xm_status",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "i_has_folder",
+                "dataType" : {
+                  "type" : "int32"
+                }
+              }, {
+                "name" : "xm_language",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "r_object_id",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "title",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "i_chronicle_id",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "iCpdKUprfqz-kp8jJOKY-$$lOHBX5iTsOYVffLWN3ae6",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "subtype",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "object_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "xm_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_has_folder",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "xm_language",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_chronicle_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "sBpBj39uPZ8YgI2OHayd7$$apInOwi2Vw3dk3HNBOxh5" : {
+      "id" : "sBpBj39uPZ8YgI2OHayd7$$apInOwi2Vw3dk3HNBOxh5",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_test_pipeline_Join_310_inner",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_test_pipeline_Join_310_inner"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_test_pipeline_pre_Join_299_inner_1", "sBpBj39uPZ8YgI2OHayd7$$apInOwi2Vw3dk3HNBOxh5", "prophecy__temp_test_pipeline_post_Cleanse_290_0", "XrwrJx_yrp3Uv1sC7-w2q$$f4o7HE6DwbN4qsC-aSo1S", "zBm3qs3KaO8Dewsw2gXLt$$Bn-u0rKkUcxld_clrnJIJ", "F7ox5nJoWS31FdImGlNzt$$aDRzUw_aJ4jcydz60bEZz", "flk-ZqaEFhRqjsE5LDorY$$rQAFVSDdIGbcpUZe4b4gZ", "xOFXi9ZaQGOmL4gWK0ECW$$h6k8uCRXLvJSkoSw6IHVH", "prophecy__temp_test_pipeline_pre_Filter_303_reject_0", "__oz9EzCf69OK0D-2FM1s$$qafrTbpt_c1wVJzODzhCe", "prophecy__temp_test_pipeline_pre_Filter_303_reject_0" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_test_pipeline_Join_310_inner_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "model_test_pipeline_Join_310_inner_in_1",
+          "slug" : "in_1"
+        }, {
+          "id" : "model_test_pipeline_Join_310_inner_in_2",
+          "slug" : "in_2"
+        }, {
+          "id" : "model_test_pipeline_Join_310_inner_in_3",
+          "slug" : "in_3"
+        } ],
+        "outputs" : [ {
+          "id" : "model_test_pipeline_Join_310_inner_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3" : {
+      "id" : "xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_test_pipeline_Cleanse_290",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_test_pipeline_Cleanse_290"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_test_pipeline_post_Cleanse_290_0", "xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3", "prophecy__temp_test_pipeline_pre_Cleanse_290_0" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_test_pipeline_Cleanse_290_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_test_pipeline_Cleanse_290_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "V4YgmAVUokiAJxoanueP7$$MMwL9Z11GiZGSq-zamdnM" : {
+      "id" : "V4YgmAVUokiAJxoanueP7$$MMwL9Z11GiZGSq-zamdnM",
+      "component" : "OrchestrationSource",
+      "kind" : "DatabricksSource",
+      "metadata" : {
+        "label" : "object_attributes_databricks",
+        "x" : -1180,
+        "y" : -420,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "databricks",
+          "properties" : {
+            "id" : "dev-test"
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "tableFullName" : {
+            "database" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "main"
+                  }
+                } ]
+              }
+            },
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "rishabh"
+                  }
+                } ]
+              }
+            },
+            "name" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "aka_GPDIP_EDLUD_302"
+                  }
+                } ]
+              }
+            }
+          }
+        },
+        "format" : {
+          "properties" : {
+            "description" : "Categorical data capturing values and their corresponding names, positions, and object identifiers for analytical purposes.",
+            "schema" : {
+              "providerType" : "Arrow",
+              "fields" : [ {
+                "name" : "r_object_id",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "Unique identifier for the object represented as a string"
+              }, {
+                "name" : "i_position",
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "The position index of the object in a sequence"
+              }, {
+                "name" : "name",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "The name associated with the object"
+              }, {
+                "name" : "value",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "The value associated with the object"
+              } ]
+            },
+            "properties" : { },
+            "additionalProperties" : {
+              "copilot" : {
+                "datasetDescriptionStatus" : "fromCopilot"
+              }
+            },
+            "kind" : "databricks"
+          },
+          "kind" : "databricks",
+          "category" : "table"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "cuinrKV0XC99U_cYXbvKq$$rWJkGy_JgceXgW9J5LLja",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "prophecy__temp_test_pipeline_pre_Join_313_inner_0" : {
+      "id" : "prophecy__temp_test_pipeline_pre_Join_313_inner_0",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_312",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_test_pipeline_pre_Join_313_inner_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_test_pipeline_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_3_1",
+          "slug" : "input_port_3_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_3_1",
+          "slug" : "output_port_3_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "prophecy__temp_test_pipeline_pre_Filter_323_reject_0" : {
+      "id" : "prophecy__temp_test_pipeline_pre_Filter_323_reject_0",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_324",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_test_pipeline_pre_Filter_323_reject_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_test_pipeline_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_2_1",
+          "slug" : "input_port_2_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_2_1",
+          "slug" : "output_port_2_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "5ATNpzNbRJMmjZvkiaaS0$$3nTROhaa2s2jNGIVVBnPC" : {
+      "id" : "5ATNpzNbRJMmjZvkiaaS0$$3nTROhaa2s2jNGIVVBnPC",
+      "component" : "OrchestrationSource",
+      "kind" : "DatabricksSource",
+      "metadata" : {
+        "label" : "unstructured_output_databricks",
+        "x" : -4200,
+        "y" : -460,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "databricks",
+          "properties" : {
+            "id" : "dev-test"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "category" : "table",
+          "kind" : "databricks",
+          "properties" : {
+            "description" : "Categorical data capturing values and their corresponding names, positions, and object identifiers for analytical purposes.",
+            "schema" : {
+              "providerType" : "Arrow",
+              "fields" : [ {
+                "name" : "r_object_id",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "Unique identifier for the object represented as a string"
+              }, {
+                "name" : "i_position",
+                "dataType" : {
+                  "type" : "int32"
+                },
+                "description" : "The position index of the object in a sequence"
+              }, {
+                "name" : "name",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "The name associated with the object"
+              }, {
+                "name" : "value",
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "description" : "The value associated with the object"
+              } ]
+            },
+            "properties" : { },
+            "additionalProperties" : {
+              "copilot" : {
+                "datasetDescriptionStatus" : "fromCopilot"
+              }
+            },
+            "kind" : "databricks"
+          }
+        },
+        "properties" : {
+          "tableFullName" : {
+            "database" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "main"
+                  }
+                } ]
+              }
+            },
+            "schema" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "rishabh"
+                  }
+                } ]
+              }
+            },
+            "name" : {
+              "type" : "concat_operation",
+              "properties" : {
+                "elements" : [ {
+                  "type" : "literal",
+                  "properties" : {
+                    "value" : "aka_gpdip_edlud_302"
+                  }
+                } ]
+              }
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "YpKyOxbHKVQVi9TNXS1vL$$t1ZElep71Kia4SKeIhEg6",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "9AMO_YmQBdLxxj8GY2dHO$$6Bfm4F1njKuwbc83pfoN2" : {
+      "id" : "9AMO_YmQBdLxxj8GY2dHO$$6Bfm4F1njKuwbc83pfoN2",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_test_pipeline_Sort_266",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_test_pipeline_Sort_266"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_test_pipeline_post_Sort_266_0", "9AMO_YmQBdLxxj8GY2dHO$$6Bfm4F1njKuwbc83pfoN2", "M1id_JOwDv0qAxXL-_00-$$dcLVJ_zcIb55KSHlbdmUB", "jS1gQD0BE-h0onexnELi0$$hAMvDJCygB8ZzXs737VNX", "DwlCq0zPLb7puVjbLxraP$$T-FMTIAxPrr_LcXUK0c0V", "N3BlY_YQkol8TT-Fp89QN$$h7aPt62H4hecYucKWXEox", "fBa5WQl97JcOyM654rCdB$$HoeFn7JyBwXtOYpBbBRQm", "k0ox2HMoP41tZb-wVYfxW$$RjoXUhIZyuuoJ3O_S9joE", "jpkat9uExNFiO1JtFqn3E$$Rn4s8Srm2NcPx85TXZUCV", "Isj7o8MT7NPn4ZNNl_z8_$$nVgfv1FEKLuNUqUjwGsn8", "7NztKdvUh4wok4z0x2O0E$$MzRC3Bp-WdiQpIppO7CYP", "WZ52bMwBWNh7F0XS46McS$$l0gcd1D1Na7z5i1bVasls", "Io-i6TGxKQyzW8HKdZj1k$$bjhd7k9Jd-dx9CL_KNlsV", "kUoTrl1EDBcHIDFVFZkZq$$xKR94kRAWArc8dKlZIOHu", "Zt9kiga1XEDqmqAtKJhSC$$dcy4lPba-_ni7oDykn9_O", "LjGLlD3LmJdQ2a1SKcOqC$$ogtASRs-AGyUX9HwviGhn", "yQ_7Etax02VTGsXuvxlzG$$uoaj-TAoFhgPrFY4yU2UH", "cg80S3myNW5wMfDW0R9tc$$BCKvPyt5GSCQDyBTUn1OW", "N1avhQsRObdr2vKWSTFbz$$T9bDNOINTqrxBNzEwy_6w", "1fpsyZtk27a3FIK68Xd8v$$Ir7CgybnGBNVSFSp2RE9d", "PFMJdcCmQZF7s5FTQNtL0$$l7rzGbUm8vZTYkN1jJ4UO", "9nabOUrbrDkIzdMfFXEYT$$xBHnR_sljxVMytegYEnkM", "JEQj-dAhEJq_7xIPZiD1V$$rSaTFL9PAWnarg_N_DqhO", "lMjWFR62Z7rH-YeAIQ0Mo$$eBV7wHRnTh6I9tJO-VSN3", "iz_SLYnZVti5cKZILIwvR$$EnL28CTqzsesi_I46TuCM", "39VSAS-eZuWT2NnZbtxWm$$4QPiFNSy-FEpcfYRVni7M", "Q7G_e44YP-fQdMv2q7amJ$$rxDdMiU86BWk4WmjbS_7E", "PVw4X8bJSJtf2ybzk3c0m$$ezyXAU146szHs5LRz6koP", "cx_NnhAoTcqmKhZmUIC_5$$IqL_ixBHoX9DbbWLV3RM1", "XN0E5aw5TiJPceXFCIT8g$$hUQNK-15rwf_ps2ySOLjm", "r2do2WVY3HccXlR-W9gU7$$vduBppZQsT-k_O4LrL1WB", "O_fDiVE0soA_trO-6GgS7$$WA-IdhFYA-4QSQVMp0r1r", "P26vMLflc9FXmw0-dhsjn$$NLdM_KlJxplxaPd_TXw10", "B701T2rb6lWpds2fWXDiA$$97WOTBp2u95gSuPseiyDi", "NVhpVvN1VrhMdOBktVgMt$$nkfd238ejsmX25CgVhJWr", "cEK4DEXG7uhhn0M_TqZYU$$I_l4fIRc7tBxb1MRZ4siN", "P66a3tBuEOg-vr3C7FCZv$$zSFd4Z4MdFOhuw3n7g9MI", "2GsEZ6jhaNvnmuOWB32oy$$_rE8_HYRUaTzU4i-pC1rj", "KnbdrW0wjs54f3NEhRCIh$$lo-vezcOHMyzJSBQhCsrs", "yYjFAndQyNFqps9TkMcUd$$NbWRijzLyTM1uggcc1ZNa", "xNrL9pjFpXZlbmEggwQjy$$nzY9qicRWaiUm788tM5Ry", "QYteT9dm-NZbkCQjXtjWF$$M5O8pU_7Nai8ZY2SvYcYm", "PEsHdzmY49vL268o81pBF$$6ZvwFsTKp1O-3AKpDGyDf", "C2eB1Wpl-bO1I8SRnQXGN$$fegqwy4kPGYuxoizgjbVs", "wpKgsXWM5RU6_pIF9QgSu$$UTgyJti6uzkv5LwAjbaT2", "6PbO3D4Aa2ty3-P7IfqgT$$D1u1dP6uAhUbr68_Fi30A", "AZZViPjWmGwPKxBQ_mQLv$$dga3vpqUesK6fnSdqJn0q", "XkcLSWnixRt4wkvnyLMEX$$eTKQAKuG_T5MtSWNe0NvW", "auv-ikymDZFA_5mXYpX6u$$CynifIfg5ZgFphJm_xVR8", "eJ-oeA8RQRu7LJyM6Ebgi$$ahkGoSdq_Xn27G10Oatf1", "WhbeG9taAVqy-w9l5ki-Z$$9Vee_TGZoX4SoqB-2KdfI", "luveKpEvBHlYt6QBK0IvN$$s9AafsYZDx7HLsY2f3bnE", "kY4n3Gos44WSRinKD2Dql$$z6M_y-IDGbN09w2GZ-dAj", "PztvOBYA4qH_YrGwyr7BF$$53gGYLIih36Gz0LRQti1O", "jbJo3rcChprP65YSMM7RQ$$FAfdAr_KN_jI1frChZ5k9", "rVuRCWLzDbpPicOoSWX8A$$6JmVdUBet8pv-R2vSb6JW", "6YrVgwCF0oc2IgCdh0d14$$Mg19ezE1e1wd9Rpfk3uQs", "qhUhtY6b2Hsg_0V-UbDAH$$DhqwZHLhxWMPE47JnZyF3", "-bTtVWRDA_8-Ow9hQYxlf$$yPEcRzegU4hmDh9tc6uId", "Lj4UM2_YXNyxZ2T9729P-$$WEMwFqB-qih9dEttU_3Er", "OCnVgwAt3fBHnDlu5FqeH$$tzjqliDHV-tbJ9dicefIa", "Xnzl6XEowuY0qU-fqnzXR$$DmUmuvdWXl2LkU3a_m0G-", "LfD02vMCkNYHd09uInvNQ$$KpGixl9uZsn834LYa6mYW", "3PyOKeJT55mXH7BdyZaIF$$ohV7O-_k809TXy78adPm5", "MbPf5gxBIh3z71qQD_mtj$$9zdtL-n0J6skhJSm28I45", "lvwat0LyQ1OWQcDBMmDbB$$0FA17KlArFqspdWvba8ov", "8-aCcVTcsODMiyJQ4pxR0$$FdVOWbm3VoNzm3UVzj6D8", "ih3aOS6CrMcVdno14IiY7$$jxdUUEWwhfPHyjxMNuP-n", "M8yhrzeI-kLuaAwlvZojh$$wt3jKcDomua01adk-H8EY", "vV141lGgGT6EXWN4Am7JD$$1A8uC6bQlyPHVMqQpq6nJ", "gMQx0-h3I0z3eyrBXaR8-$$hSsNgoPQXZ9gfHXKkwJhb", "7SvKW4Q4iu4rqoPzaH9yZ$$4qUlyhHF_ydvRV5TG6C3D", "G6rSQACmqu36iO4gUAhVq$$vDYdbVKy5T9VEi4V9qmlL", "lla2Syd_3sCdga6DuIoSK$$D5q0cVIVZO2L0t7dbHuH1", "yX7mNXfczT-OfFgKhyWAN$$YZO-GxqNPQM7xQyAwVOVV", "XDadUTyCdSX1LnZW1mjtw$$i49gnC0NsftyluX1wrd0t" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "model_test_pipeline_Sort_266_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "eZI8c1xG_ola1E7X0eRr-$$fpvNgvjf71tWwRPp9E_2g" : {
+      "id" : "eZI8c1xG_ola1E7X0eRr-$$fpvNgvjf71tWwRPp9E_2g",
+      "component" : "OrchestrationSource",
+      "kind" : "SFTPSource",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_289",
+        "x" : -540,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "sftp",
+          "id" : "transpiled_connection",
+          "properties" : {
+            "authMethod" : "password",
+            "username" : "transpiled_username",
+            "host" : "sftp.prophecy.io",
+            "id" : "transpiled_connection",
+            "port" : 22,
+            "password" : {
+              "kind" : "prophecy",
+              "properties" : {
+                "name" : "transpiled_secret",
+                "value" : "transpiled_secret"
+              },
+              "subKind" : "text",
+              "type" : "secret"
+            }
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : "aka_GPDIP_EDLUD_289.xlsx"
+        },
+        "format" : {
+          "kind" : "xlsx",
+          "properties" : {
+            "schema" : {
+              "providerType" : "Databricks",
+              "fields" : [ {
+                "name" : "is_active",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "is_static",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "extract_date",
+                "dataType" : {
+                  "type" : "timestamp"
+                }
+              }, {
+                "name" : "product_name",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "country_abbreviation",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "app_country_id",
+                "dataType" : {
+                  "type" : "int32"
+                }
+              }, {
+                "name" : "country_name",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              } ]
+            }
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "a3oR27OHAvLB_1l75nTry$$8oBH8_Yl1z0X9NCYv7WUq",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "is_active",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_static",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "product_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_abbreviation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "KHPByw3JOhoas4-4aTeND",
+    "source" : "eZI8c1xG_ola1E7X0eRr-$$fpvNgvjf71tWwRPp9E_2g",
+    "sourcePort" : "a3oR27OHAvLB_1l75nTry$$8oBH8_Yl1z0X9NCYv7WUq",
+    "target" : "prophecy__temp_test_pipeline_pre_Cleanse_290_0",
+    "targetPort" : "input_port_0_1"
+  }, {
+    "id" : "PEV7m-5F2YLD2W90IANWt",
+    "source" : "Ol6KduY0NM6ft9ymav_LF$$pvCWQAVpeVB9G71G7sAjG",
+    "sourcePort" : "vvJkEYNfB2ffg3wgdxomx$$CdVETD61CuCI6A7Y8RaJQ",
+    "target" : "prophecy__temp_test_pipeline_pre_Filter_323_reject_0",
+    "targetPort" : "input_port_2_1"
+  }, {
+    "id" : "sRKCeQM5QGoG40rokCxsG",
+    "source" : "8QGupWGncxyagtgz-OBTb$$vcGm2rPs2yN70VnlnuT6A",
+    "sourcePort" : "YXdgCGrdyBjH1r1YfgMxm$$qnXsF4S202kh9aou2bIB3",
+    "target" : "prophecy__temp_test_pipeline_pre_Join_313_inner_0",
+    "targetPort" : "input_port_3_1"
+  }, {
+    "id" : "MeudmtPQNpxY4NvZ7mp_T",
+    "source" : "GqnlKbCRYYhffGoqOovp2$$r-dh76ayi-bsCiZGuEyEJ",
+    "sourcePort" : "oFYy4kwxo42s1WUGHK0Cu$$BrjAT31j7PfvI-oe8czTk",
+    "target" : "prophecy__temp_test_pipeline_pre_Filter_303_reject_0",
+    "targetPort" : "input_port_5_1"
+  }, {
+    "id" : "E71hVckpmZrULdnGFIxjX",
+    "source" : "2s_5T04fBCP5BcmZ4LcuQ$$fNKnRQV_dArePx7PvU0ER",
+    "sourcePort" : "iCpdKUprfqz-kp8jJOKY-$$lOHBX5iTsOYVffLWN3ae6",
+    "target" : "prophecy__temp_test_pipeline_pre_Join_299_inner_0",
+    "targetPort" : "input_port_6_1"
+  }, {
+    "id" : "conn_prophecy__temp_test_pipeline_pre_Join_313_inner_0_vmRNbYijzXEcgkgmL4XnL$$YL9QEl1UbQ11LQ6FarCp2_FYxi6JjPXXks8xKhDQKYI$$Vzron9VW0YDEQBxSonKRz",
+    "source" : "prophecy__temp_test_pipeline_pre_Join_313_inner_0",
+    "sourcePort" : "output_port_3_1",
+    "target" : "1c7tek_tG0EVHzIVZSwoR$$q4kzMWFwWwdgPy5uY5LtF",
+    "targetPort" : "model_test_pipeline_AlteryxSelect_294_in_0"
+  }, {
+    "id" : "conn_prophecy__temp_test_pipeline_pre_Join_299_inner_0_vGx4kFyyuIDmmMpped68-$$dP3Zxforu8VGBXhJiaCla_dk61IGYy0Op5XN-uPRx55$$z_nJZnfgnj15Sb_D44qnG",
+    "source" : "prophecy__temp_test_pipeline_pre_Join_299_inner_0",
+    "sourcePort" : "output_port_6_1",
+    "target" : "1c7tek_tG0EVHzIVZSwoR$$q4kzMWFwWwdgPy5uY5LtF",
+    "targetPort" : "model_test_pipeline_AlteryxSelect_294_in_2"
+  }, {
+    "id" : "conn_prophecy__temp_test_pipeline_pre_Filter_303_reject_0___oz9EzCf69OK0D-2FM1s$$qafrTbpt_c1wVJzODzhCe_Kttld19oeZhyrjLp7nzDE$$Bde_ccOFGvwB9UkhEe1Qf",
+    "source" : "prophecy__temp_test_pipeline_pre_Filter_303_reject_0",
+    "sourcePort" : "output_port_5_1",
+    "target" : "sBpBj39uPZ8YgI2OHayd7$$apInOwi2Vw3dk3HNBOxh5",
+    "targetPort" : "model_test_pipeline_Join_310_inner_in_2"
+  }, {
+    "id" : "conn_prophecy__temp_test_pipeline_pre_Filter_303_reject_0_xOFXi9ZaQGOmL4gWK0ECW$$h6k8uCRXLvJSkoSw6IHVH_DS3djRo-TqI2MboeMPlUR$$GGJkSStnBF34VgSSyb6__",
+    "source" : "prophecy__temp_test_pipeline_pre_Filter_303_reject_0",
+    "sourcePort" : "output_port_5_1",
+    "target" : "sBpBj39uPZ8YgI2OHayd7$$apInOwi2Vw3dk3HNBOxh5",
+    "targetPort" : "model_test_pipeline_Join_310_inner_in_3"
+  }, {
+    "id" : "conn_prophecy__temp_test_pipeline_pre_Filter_323_reject_0_H2I18L7YRleZhXcXmjIqs$$JmnD4phAtSyGY2hRFFkT5_k7opkHqS-NkaVuy_zJ8eJ$$S9hEWBmspIEkDpPQvXzkN",
+    "source" : "prophecy__temp_test_pipeline_pre_Filter_323_reject_0",
+    "sourcePort" : "output_port_2_1",
+    "target" : "H1ZUHBIonkSD6dvHt4tdC$$vnJhfw-axFLjUfKsiZauT",
+    "targetPort" : "model_test_pipeline_Join_318_inner_in_2"
+  }, {
+    "id" : "conn_prophecy__temp_test_pipeline_pre_Filter_323_reject_0_R296zmI2Ag4ZakZ09DT1R$$5gFokgEGoxXcaSNrpNAHg_tD5QZT6-pQuHAl6MRCZ8m$$A1SfiawBFoiZ4reVy8i-h",
+    "source" : "prophecy__temp_test_pipeline_pre_Filter_323_reject_0",
+    "sourcePort" : "output_port_2_1",
+    "target" : "H1ZUHBIonkSD6dvHt4tdC$$vnJhfw-axFLjUfKsiZauT",
+    "targetPort" : "model_test_pipeline_Join_318_inner_in_3"
+  }, {
+    "id" : "conn_prophecy__temp_test_pipeline_pre_Cleanse_290_0_xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3_lRTu2_eRs8mxzoiRr3hna$$OWpDe8lRypA2UbcLiN-YJ",
+    "source" : "prophecy__temp_test_pipeline_pre_Cleanse_290_0",
+    "sourcePort" : "output_port_0_1",
+    "target" : "xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3",
+    "targetPort" : "model_test_pipeline_Cleanse_290_in_0"
+  }, {
+    "id" : "conn_H1ZUHBIonkSD6dvHt4tdC$$vnJhfw-axFLjUfKsiZauT_1c7tek_tG0EVHzIVZSwoR$$q4kzMWFwWwdgPy5uY5LtF",
+    "source" : "H1ZUHBIonkSD6dvHt4tdC$$vnJhfw-axFLjUfKsiZauT",
+    "sourcePort" : "model_test_pipeline_Join_318_inner_out_0",
+    "target" : "1c7tek_tG0EVHzIVZSwoR$$q4kzMWFwWwdgPy5uY5LtF",
+    "targetPort" : "model_test_pipeline_AlteryxSelect_294_in_0"
+  }, {
+    "id" : "conn_sBpBj39uPZ8YgI2OHayd7$$apInOwi2Vw3dk3HNBOxh5_1c7tek_tG0EVHzIVZSwoR$$q4kzMWFwWwdgPy5uY5LtF",
+    "source" : "sBpBj39uPZ8YgI2OHayd7$$apInOwi2Vw3dk3HNBOxh5",
+    "sourcePort" : "model_test_pipeline_Join_310_inner_out_0",
+    "target" : "1c7tek_tG0EVHzIVZSwoR$$q4kzMWFwWwdgPy5uY5LtF",
+    "targetPort" : "model_test_pipeline_AlteryxSelect_294_in_0"
+  }, {
+    "id" : "conn_xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3_sBpBj39uPZ8YgI2OHayd7$$apInOwi2Vw3dk3HNBOxh5",
+    "source" : "xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3",
+    "sourcePort" : "model_test_pipeline_Cleanse_290_out_0",
+    "target" : "sBpBj39uPZ8YgI2OHayd7$$apInOwi2Vw3dk3HNBOxh5",
+    "targetPort" : "model_test_pipeline_Join_310_inner_in_0"
+  }, {
+    "id" : "conn_xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3_H1ZUHBIonkSD6dvHt4tdC$$vnJhfw-axFLjUfKsiZauT",
+    "source" : "xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3",
+    "sourcePort" : "model_test_pipeline_Cleanse_290_out_0",
+    "target" : "H1ZUHBIonkSD6dvHt4tdC$$vnJhfw-axFLjUfKsiZauT",
+    "targetPort" : "model_test_pipeline_Join_318_inner_in_0"
+  } ],
+  "component" : "Pipeline"
+}

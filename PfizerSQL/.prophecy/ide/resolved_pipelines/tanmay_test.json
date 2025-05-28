@@ -1,0 +1,341 @@
+{
+  "id" : "tanmay_test",
+  "metainfo" : {
+    "label" : "tanmay_test",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    }
+  },
+  "processes" : {
+    "QkPd-r5vuTNefe_oU6oC2$$a2L6PO1ef-yS0a5eqVLt4" : {
+      "id" : "QkPd-r5vuTNefe_oU6oC2$$a2L6PO1ef-yS0a5eqVLt4",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_tanmay_test_AlteryxSelect_327",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_tanmay_test_AlteryxSelect_327"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_tanmay_test_post_AlteryxSelect_327_0", "QkPd-r5vuTNefe_oU6oC2$$a2L6PO1ef-yS0a5eqVLt4", "VPdEIvdZCFHjLRF_7fqj1$$2o259SYgtgNIoKmPOnSaK", "prophecy__temp_tanmay_test_pre_Filter_303_reject_0" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_tanmay_test_AlteryxSelect_327_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_tanmay_test_AlteryxSelect_327_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "_MBrxNDUcgCkO-qYbEqW-$$4KRL1SF4BH3KVHUPMQKYt" : {
+      "id" : "_MBrxNDUcgCkO-qYbEqW-$$4KRL1SF4BH3KVHUPMQKYt",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "AKA_GPDIP_EDLUD_302",
+        "x" : -860,
+        "y" : -400,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "properties" : {
+            "id" : "oracle-test"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "oracle",
+          "properties" : {
+            "schema" : {
+              "fields" : [ {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "r_object_id"
+              }, {
+                "dataType" : {
+                  "type" : "decimal"
+                },
+                "name" : "i_position"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "name"
+              }, {
+                "dataType" : {
+                  "type" : "decimal"
+                },
+                "name" : "value"
+              } ],
+              "providerType" : "arrow"
+            }
+          }
+        },
+        "properties" : {
+          "pathSelection" : "warehouseQuery",
+          "tableFullName" : {
+            "database" : "default",
+            "name" : "AKA_GPDIP_EDLUD_302",
+            "schema" : "DEMOS"
+          },
+          "warehouseQuery" : {
+            "query" : "SELECT * FROM DEMOS.AKA_GPDIP_EDLUD_302 FETCH FIRST 1000 ROWS ONLY"
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "eWi2zBrX8fejgCUA2hNLw$$CS-J3ch0NBYMfFYJgQvG2",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "r_object_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "i_position",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "value",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "prophecy__temp_tanmay_test_pre_Filter_303_reject_0" : {
+      "id" : "prophecy__temp_tanmay_test_pre_Filter_303_reject_0",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "AKA_GPDIP_EDLUD_302",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_tanmay_test_pre_Filter_303_reject_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_tanmay_test_source",
+          "alias" : ""
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0_1",
+          "slug" : "input_port_0_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0_1",
+          "slug" : "output_port_0_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "1HCjT_MaPxC2aAibmbyjj$$tVWV14CRM4kPsanags-Ai" : {
+      "id" : "1HCjT_MaPxC2aAibmbyjj$$tVWV14CRM4kPsanags-Ai",
+      "component" : "OrchestrationSource",
+      "kind" : "OracleSource",
+      "metadata" : {
+        "label" : "ORACLE_LARGE_AKA_GPDIP_EDLUD_289",
+        "x" : -160,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "oracle",
+          "properties" : {
+            "id" : "oracle-test"
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "oracle",
+          "properties" : {
+            "schema" : {
+              "fields" : [ {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "is_static"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "extract_date"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "product_name"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "country_abbreviation"
+              }, {
+                "dataType" : {
+                  "type" : "decimal"
+                },
+                "name" : "app_country_id"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "country_name"
+              }, {
+                "dataType" : {
+                  "type" : "utf8"
+                },
+                "name" : "is_active"
+              } ],
+              "providerType" : "arrow"
+            }
+          }
+        },
+        "properties" : {
+          "pathSelection" : "tableFullName",
+          "tableFullName" : {
+            "database" : "default",
+            "name" : "ORACLE_LARGE_AKA_GPDIP_EDLUD_289",
+            "schema" : "DEMOS"
+          },
+          "warehouseQuery" : { }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "PysU3CsAugMGrvZdcv6N0$$APQj1u3YtYRQU0ckGYwka",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "is_static",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "extract_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "product_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_abbreviation",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "app_country_id",
+              "dataType" : {
+                "type" : "Decimal"
+              }
+            }, {
+              "name" : "country_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "is_active",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "rXe2VVOHEA7PcDdqytpcj$$yRnEzCCOEy8oMb-Ki-fqA" : {
+      "id" : "rXe2VVOHEA7PcDdqytpcj$$yRnEzCCOEy8oMb-Ki-fqA",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_tanmay_test_Summarize_305",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_tanmay_test_Summarize_305"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_tanmay_test_post_Summarize_305_0", "rXe2VVOHEA7PcDdqytpcj$$yRnEzCCOEy8oMb-Ki-fqA", "xs9a7gmg819Cy5fiJRvFi$$i8Ho9R4Z_Rpv9osmxBAWV", "9OEoWUcP57CBpXgMgM4Q2$$gYY43liYlEwRCR_hRkdu9", "prophecy__temp_tanmay_test_pre_Filter_303_reject_0" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_tanmay_test_Summarize_305_in_0",
+          "slug" : "in_0"
+        } ],
+        "outputs" : [ {
+          "id" : "model_tanmay_test_Summarize_305_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "-qgiA8XwW8oY9WITtDnk3",
+    "source" : "_MBrxNDUcgCkO-qYbEqW-$$4KRL1SF4BH3KVHUPMQKYt",
+    "sourcePort" : "eWi2zBrX8fejgCUA2hNLw$$CS-J3ch0NBYMfFYJgQvG2",
+    "target" : "prophecy__temp_tanmay_test_pre_Filter_303_reject_0",
+    "targetPort" : "input_port_0_1"
+  }, {
+    "id" : "conn_prophecy__temp_tanmay_test_pre_Filter_303_reject_0_9OEoWUcP57CBpXgMgM4Q2$$gYY43liYlEwRCR_hRkdu9_i2ji_zyDCXjYlGLi-bR5o$$g4lp4nIry_wWYglSxelzj",
+    "source" : "prophecy__temp_tanmay_test_pre_Filter_303_reject_0",
+    "sourcePort" : "output_port_0_1",
+    "target" : "rXe2VVOHEA7PcDdqytpcj$$yRnEzCCOEy8oMb-Ki-fqA",
+    "targetPort" : "model_tanmay_test_Summarize_305_in_0"
+  }, {
+    "id" : "conn_prophecy__temp_tanmay_test_pre_Filter_303_reject_0_VPdEIvdZCFHjLRF_7fqj1$$2o259SYgtgNIoKmPOnSaK_N8XyxARnDc9RbZsI-Wbx-$$ktn-pIGFDYZN2hED3o7Qj",
+    "source" : "prophecy__temp_tanmay_test_pre_Filter_303_reject_0",
+    "sourcePort" : "output_port_0_1",
+    "target" : "QkPd-r5vuTNefe_oU6oC2$$a2L6PO1ef-yS0a5eqVLt4",
+    "targetPort" : "model_tanmay_test_AlteryxSelect_327_in_0"
+  } ],
+  "component" : "Pipeline"
+}

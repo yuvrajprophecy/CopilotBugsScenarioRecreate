@@ -1,0 +1,525 @@
+{
+  "id" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner",
+  "metainfo" : {
+    "label" : "model_Large_LU_Document_Selection_Disabled_Join_318_inner",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_0\"",
+        "materialized" : "table",
+        "database" : "\"main\"",
+        "schema" : "\"rishabh\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "KKW8avHf0q5YvFfFFvTqu$$OcaBCD5aC8bDjJPY3NVFW" : {
+      "id" : "KKW8avHf0q5YvFfFFvTqu$$OcaBCD5aC8bDjJPY3NVFW",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_322_inner",
+        "x" : -740,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.r_object_id = in1.r_object_id",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.pfleet_subcountry_row_id",
+            "_row_id" : null
+          },
+          "alias" : "pfleet_subcountry_row_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4ZvEB2Rn99G0R_1zqiJmm$$BaoqzvIQ47D8aMV7E0dgd",
+          "slug" : "in0"
+        }, {
+          "id" : "4yXZIVwbTjPgUWHhhQscG$$ozLBrgx-aEiZ_mf5uaVzT",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "fOtEg6nAomtqHXb6vV55g$$oUfKGRZodJLo17hhc5JdN",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0" : {
+      "id" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "LARGE_AKA_GPDIP_EDLUD_324",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_Large_LU_Document_Selection_Disabled_source",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "output_port_3_1",
+          "slug" : "output_port_3_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "KC-rZMT4ozLscNvhdgHbC$$e7Xofy4QyGLQ0SeVKWO8-" : {
+      "id" : "KC-rZMT4ozLscNvhdgHbC$$e7Xofy4QyGLQ0SeVKWO8-",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "Sort_316",
+        "x" : -1140,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "orders" : [ {
+          "expression" : {
+            "expression" : "ENCODE(CAST(r_object_id AS string), 'utf-8')",
+            "_row_id" : null
+          },
+          "sortType" : "asc",
+          "nullsType" : ""
+        }, {
+          "expression" : {
+            "expression" : "ENCODE(CAST(value AS string), 'utf-8')",
+            "_row_id" : null
+          },
+          "sortType" : "asc",
+          "nullsType" : ""
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nkmGf5f0Y9I5IFe2Ko_ov$$x1k4dPL9VkCSVVfMD3erx",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "jB_Wqzphchgj9G7HsXd2E$$gNbqyv-j5qydKNpaHl34t",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ofBynm4ulMlBX1e3lZncu$$tvu69Wn1icIjKsv-BhEII" : {
+      "id" : "ofBynm4ulMlBX1e3lZncu$$tvu69Wn1icIjKsv-BhEII",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_323",
+        "x" : -1340,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "name = 'PFLEET_SUB_COUNTRY_ROW_ID'",
+          "_row_id" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LFHZl-SG_C4FWFfD7cPUW$$9Plbf8w6agTjhbUM3ZJC1",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "aolZxuVctqca63rciy4s7$$0u01ldTcFIJ1GAOScNCwa",
+          "slug" : "out1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "VGh6fAMvSYErVGRrDuiuG$$1p8TCANnzA5rlyniNtoCl" : {
+      "id" : "VGh6fAMvSYErVGRrDuiuG$$1p8TCANnzA5rlyniNtoCl",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_323_reject",
+        "x" : -1340,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "NOT name = 'PFLEET_SUB_COUNTRY_ROW_ID'",
+          "_row_id" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6s_F1fXerLgrwWT5arWqz$$WxnJPJ9NWkvxIDRmBBxuY",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "QejMcI2JhJOoevH2eDE0I$$-vCfATxLpO9hALsiuRPuJ",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "wY4dh_jwImQYsD4AKAQRd$$1HlKjcIM_mcOy4_Zfi_wJ" : {
+      "id" : "wY4dh_jwImQYsD4AKAQRd$$1HlKjcIM_mcOy4_Zfi_wJ",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Summarize_317",
+        "x" : -940,
+        "y" : 320,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "concat_ws(',', collect_list(value))",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : "",
+          "_row_id" : null
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : null,
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "YUcE8N8rMq6Q-t_esPJ-7$$lyGGuKYrmYwpFEl--V9ah",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Ae1XBykrZ44ndtQDAUDkJ$$KxvlRrA3XVb-Xr4LplXJN",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN" : {
+      "id" : "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_318_inner",
+        "x" : -480,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.app_country_id = in1.pfleet_subcountry_row_id",
+            "_row_id" : null
+          },
+          "joinType" : "inner",
+          "rightAlias" : null
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.extract_date",
+            "_row_id" : null
+          },
+          "alias" : "extract_date",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.r_version_label",
+            "_row_id" : null
+          },
+          "alias" : "r_version_label",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in1.r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.app_country_id",
+            "_row_id" : null
+          },
+          "alias" : "app_country_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "in0.country_name",
+            "_row_id" : null
+          },
+          "alias" : "country_name",
+          "description" : null,
+          "_row_id" : null
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Z64MbI3FHWO-cdZikTFtO$$98w5QbxheybJKaHIv4Elc",
+          "slug" : "in0"
+        }, {
+          "id" : "ctrNlaZ4AVDbgh1puN61i$$hTihOoIBeXRVAaFmb5SUu",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "0O_IOh4EE0oqXMjnMP689$$YChOmWw9PQ7-QXu1U0QZ4",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "V3CEkkOhgFzVFqmW7P2a3$$0HGcZJmBrAobLOpjtNXtE" : {
+      "id" : "V3CEkkOhgFzVFqmW7P2a3$$0HGcZJmBrAobLOpjtNXtE",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "AlteryxSelect_326",
+        "x" : -1140,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "i_position",
+            "_row_id" : null
+          },
+          "alias" : "i_position",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "name",
+            "_row_id" : null
+          },
+          "alias" : "name",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "CAST(value AS INTEGER)",
+            "_row_id" : null
+          },
+          "alias" : "pfleet_subcountry_row_id",
+          "description" : null,
+          "_row_id" : null
+        }, {
+          "expression" : {
+            "expression" : "r_object_id",
+            "_row_id" : null
+          },
+          "alias" : "r_object_id",
+          "description" : null,
+          "_row_id" : null
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Aw7QX0GfexsUQp8iW1ZSH$$EEM3y72R5ruuCKPvOGiJX",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "t4fZ5jUOJg0dc0Jgse_xU$$O5b8E7VHtgdHb6BU2bU5i",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "prophecy__temp_Large_LU_Document_Selection_Disabled_post_Cleanse_290_0" : {
+      "id" : "prophecy__temp_Large_LU_Document_Selection_Disabled_post_Cleanse_290_0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Cleanse_290",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_Large_LU_Document_Selection_Disabled_post_Cleanse_290_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_Large_LU_Document_Selection_Disabled_source",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "output_port_1_1",
+          "slug" : "output_port_1_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_0" : {
+      "id" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "Join_318_inner",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM Join_318_inner\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_6_1",
+          "slug" : "input_port_6_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_6_1",
+          "slug" : "output_port_6_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "u6jitH4MN1T6hqhI43Vag",
+    "source" : "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN",
+    "sourcePort" : "0O_IOh4EE0oqXMjnMP689$$YChOmWw9PQ7-QXu1U0QZ4",
+    "target" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Join_313_inner_0",
+    "targetPort" : "input_port_6_1"
+  }, {
+    "id" : "eKnNJd9g8_SCZGzU0-lof",
+    "source" : "KKW8avHf0q5YvFfFFvTqu$$OcaBCD5aC8bDjJPY3NVFW",
+    "sourcePort" : "fOtEg6nAomtqHXb6vV55g$$oUfKGRZodJLo17hhc5JdN",
+    "target" : "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN",
+    "targetPort" : "ctrNlaZ4AVDbgh1puN61i$$hTihOoIBeXRVAaFmb5SUu"
+  }, {
+    "id" : "h7vmIzXDu_BDI7Mxdn0gS",
+    "source" : "prophecy__temp_Large_LU_Document_Selection_Disabled_post_Cleanse_290_0",
+    "sourcePort" : "output_port_1_1",
+    "target" : "Rl5mur9qJh2RGhRP11o4m$$UnnH0Tf80Y8PvoFVeDqnN",
+    "targetPort" : "Z64MbI3FHWO-cdZikTFtO$$98w5QbxheybJKaHIv4Elc"
+  }, {
+    "id" : "f0zqcw16hN6-KqYbChC-C",
+    "source" : "wY4dh_jwImQYsD4AKAQRd$$1HlKjcIM_mcOy4_Zfi_wJ",
+    "sourcePort" : "Ae1XBykrZ44ndtQDAUDkJ$$KxvlRrA3XVb-Xr4LplXJN",
+    "target" : "KKW8avHf0q5YvFfFFvTqu$$OcaBCD5aC8bDjJPY3NVFW",
+    "targetPort" : "4yXZIVwbTjPgUWHhhQscG$$ozLBrgx-aEiZ_mf5uaVzT"
+  }, {
+    "id" : "P_40Ysr8-ChWUMKvD7zZd",
+    "source" : "V3CEkkOhgFzVFqmW7P2a3$$0HGcZJmBrAobLOpjtNXtE",
+    "sourcePort" : "t4fZ5jUOJg0dc0Jgse_xU$$O5b8E7VHtgdHb6BU2bU5i",
+    "target" : "KKW8avHf0q5YvFfFFvTqu$$OcaBCD5aC8bDjJPY3NVFW",
+    "targetPort" : "4ZvEB2Rn99G0R_1zqiJmm$$BaoqzvIQ47D8aMV7E0dgd"
+  }, {
+    "id" : "1t0ujeuauz5hOli5BfwTD",
+    "source" : "KC-rZMT4ozLscNvhdgHbC$$e7Xofy4QyGLQ0SeVKWO8-",
+    "sourcePort" : "jB_Wqzphchgj9G7HsXd2E$$gNbqyv-j5qydKNpaHl34t",
+    "target" : "wY4dh_jwImQYsD4AKAQRd$$1HlKjcIM_mcOy4_Zfi_wJ",
+    "targetPort" : "YUcE8N8rMq6Q-t_esPJ-7$$lyGGuKYrmYwpFEl--V9ah"
+  }, {
+    "id" : "WoI2a_7jIYlkSmeYZXCTr",
+    "source" : "ofBynm4ulMlBX1e3lZncu$$tvu69Wn1icIjKsv-BhEII",
+    "sourcePort" : "aolZxuVctqca63rciy4s7$$0u01ldTcFIJ1GAOScNCwa",
+    "target" : "V3CEkkOhgFzVFqmW7P2a3$$0HGcZJmBrAobLOpjtNXtE",
+    "targetPort" : "Aw7QX0GfexsUQp8iW1ZSH$$EEM3y72R5ruuCKPvOGiJX"
+  }, {
+    "id" : "3jALU1OaTtxId4Xk_CFmM",
+    "source" : "VGh6fAMvSYErVGRrDuiuG$$1p8TCANnzA5rlyniNtoCl",
+    "sourcePort" : "QejMcI2JhJOoevH2eDE0I$$-vCfATxLpO9hALsiuRPuJ",
+    "target" : "KC-rZMT4ozLscNvhdgHbC$$e7Xofy4QyGLQ0SeVKWO8-",
+    "targetPort" : "nkmGf5f0Y9I5IFe2Ko_ov$$x1k4dPL9VkCSVVfMD3erx"
+  }, {
+    "id" : "conn_prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0_ofBynm4ulMlBX1e3lZncu$$tvu69Wn1icIjKsv-BhEII_LFHZl-SG_C4FWFfD7cPUW$$9Plbf8w6agTjhbUM3ZJC1",
+    "source" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0",
+    "sourcePort" : "output_port_3_1",
+    "target" : "ofBynm4ulMlBX1e3lZncu$$tvu69Wn1icIjKsv-BhEII",
+    "targetPort" : "LFHZl-SG_C4FWFfD7cPUW$$9Plbf8w6agTjhbUM3ZJC1"
+  }, {
+    "id" : "conn_prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0_VGh6fAMvSYErVGRrDuiuG$$1p8TCANnzA5rlyniNtoCl_6s_F1fXerLgrwWT5arWqz$$WxnJPJ9NWkvxIDRmBBxuY",
+    "source" : "prophecy__temp_Large_LU_Document_Selection_Disabled_pre_Filter_323_reject_0",
+    "sourcePort" : "output_port_3_1",
+    "target" : "VGh6fAMvSYErVGRrDuiuG$$1p8TCANnzA5rlyniNtoCl",
+    "targetPort" : "6s_F1fXerLgrwWT5arWqz$$WxnJPJ9NWkvxIDRmBBxuY"
+  } ],
+  "component" : "Model"
+}

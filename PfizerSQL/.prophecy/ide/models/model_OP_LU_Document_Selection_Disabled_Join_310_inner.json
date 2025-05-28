@@ -1,0 +1,260 @@
+{
+  "id" : "model_OP_LU_Document_Selection_Disabled_Join_310_inner",
+  "metainfo" : {
+    "label" : "model_OP_LU_Document_Selection_Disabled_Join_310_inner",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"prophecy__temp_OP_LU_Document_Selection_Disabled_pre_Join_299_inner_0\"",
+        "materialized" : "table",
+        "database" : "\"main\"",
+        "schema" : "\"rishabh\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "VwuZ4c7eHJi1Af1H9sGLy$$FywcUhuZwG8nXoymR0WGS" : {
+      "id" : "VwuZ4c7eHJi1Af1H9sGLy$$FywcUhuZwG8nXoymR0WGS",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "sub_country_values_1",
+        "x" : -1280,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "r_object_id"
+          },
+          "alias" : "r_object_id",
+          "_row_id" : "56777059"
+        }, {
+          "expression" : {
+            "expression" : "cast(MAX(CASE WHEN name = 'PFLEET_SUB_COUNTRY_ROW_ID' THEN value END) as int)"
+          },
+          "alias" : "pfleet_subcountry_row_id",
+          "_row_id" : "Iui-GBC4i5"
+        }, {
+          "expression" : {
+            "expression" : "concat_ws(',', collect_list(CASE WHEN name <> 'PFLEET_SUB_COUNTRY_ROW_ID' THEN value END))"
+          },
+          "alias" : "r_version_label",
+          "_row_id" : "2FpgqxMjD8"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "r_object_id"
+          },
+          "alias" : "",
+          "_row_id" : "tagKPq8-21"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gObYFsYLBW_e-3EE41-HA$$1pQYo9sOs2VhJ78kbB2bB",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "0Wp5wiQrAXaDTB0vI0GMC$$50DGCBDjWgyIAcvJIHLMb",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "L3iqXWDHcZcl-SiIfMZOI$$jZEAvhSKofGQyj-Ft3wdJ" : {
+      "id" : "L3iqXWDHcZcl-SiIfMZOI$$jZEAvhSKofGQyj-Ft3wdJ",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "1k_aka_gpdip_edlud_302",
+        "x" : -1520,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "1k_aka_gpdip_edlud_302",
+          "sourceType" : "Table",
+          "sourceName" : "main.rishabh",
+          "alias" : "",
+          "additionalProperties" : null
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SPdPAdfCAOGo62XZfat59$$o_ooau9JKUHrl_pmzNUoq",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "prophecy__temp_OP_LU_Document_Selection_Disabled_post_Cleanse_290_0" : {
+      "id" : "prophecy__temp_OP_LU_Document_Selection_Disabled_post_Cleanse_290_0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Cleanse_290",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_OP_LU_Document_Selection_Disabled_post_Cleanse_290_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_OP_LU_Document_Selection_Disabled_source",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "output_port_0_1",
+          "slug" : "output_port_0_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "BulZMP-VgTi2AojMJ85KK$$yPZh3N1t7hfKBrzw9eKwq" : {
+      "id" : "BulZMP-VgTi2AojMJ85KK$$yPZh3N1t7hfKBrzw9eKwq",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_310_inner",
+        "x" : -540,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.app_country_id = in1.pfleet_subcountry_row_id"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.extract_date"
+          },
+          "alias" : "extract_date",
+          "_row_id" : "927576104"
+        }, {
+          "expression" : {
+            "expression" : "in1.r_version_label"
+          },
+          "alias" : "r_version_label",
+          "_row_id" : "1234848046"
+        }, {
+          "expression" : {
+            "expression" : "in1.r_object_id"
+          },
+          "alias" : "r_object_id",
+          "_row_id" : "1250000308"
+        }, {
+          "expression" : {
+            "expression" : "in0.app_country_id"
+          },
+          "alias" : "app_country_id",
+          "_row_id" : "1659229544"
+        }, {
+          "expression" : {
+            "expression" : "in0.country_name"
+          },
+          "alias" : "country_name",
+          "_row_id" : "138517878"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "wUYmnqL3Quz6wjRGtfjzr$$imRXOjFrz2uaj0MuNv8ze##app_country_id", "f_evQdBwCRlvVrboU5UvH$$kM16afSREcl0a3tiWohtg##pfleet_subcountry_row_id", "wUYmnqL3Quz6wjRGtfjzr$$imRXOjFrz2uaj0MuNv8ze##extract_date", "f_evQdBwCRlvVrboU5UvH$$kM16afSREcl0a3tiWohtg##r_version_label", "f_evQdBwCRlvVrboU5UvH$$kM16afSREcl0a3tiWohtg##r_object_id", "wUYmnqL3Quz6wjRGtfjzr$$imRXOjFrz2uaj0MuNv8ze##app_country_id", "wUYmnqL3Quz6wjRGtfjzr$$imRXOjFrz2uaj0MuNv8ze##country_name" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "wUYmnqL3Quz6wjRGtfjzr$$imRXOjFrz2uaj0MuNv8ze",
+          "slug" : "in0"
+        }, {
+          "id" : "f_evQdBwCRlvVrboU5UvH$$kM16afSREcl0a3tiWohtg",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "aDt4GXISR3kPYBfpKBD48$$FjgZFZ6CKm0T-d1PUpIPV",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "prophecy__temp_OP_LU_Document_Selection_Disabled_pre_Join_299_inner_0" : {
+      "id" : "prophecy__temp_OP_LU_Document_Selection_Disabled_pre_Join_299_inner_0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "Join_310_inner",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM Join_310_inner\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1_1",
+          "slug" : "input_port_1_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1_1",
+          "slug" : "output_port_1_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "r3QcA2cfcxd0tQPMRD1kZ",
+    "source" : "BulZMP-VgTi2AojMJ85KK$$yPZh3N1t7hfKBrzw9eKwq",
+    "sourcePort" : "aDt4GXISR3kPYBfpKBD48$$FjgZFZ6CKm0T-d1PUpIPV",
+    "target" : "prophecy__temp_OP_LU_Document_Selection_Disabled_pre_Join_299_inner_0",
+    "targetPort" : "input_port_1_1"
+  }, {
+    "id" : "59xtA0YuxsQhYjB17-jSG",
+    "source" : "VwuZ4c7eHJi1Af1H9sGLy$$FywcUhuZwG8nXoymR0WGS",
+    "sourcePort" : "0Wp5wiQrAXaDTB0vI0GMC$$50DGCBDjWgyIAcvJIHLMb",
+    "target" : "BulZMP-VgTi2AojMJ85KK$$yPZh3N1t7hfKBrzw9eKwq",
+    "targetPort" : "f_evQdBwCRlvVrboU5UvH$$kM16afSREcl0a3tiWohtg"
+  }, {
+    "id" : "UelR21eS0f8zoLRPC3q8a",
+    "source" : "prophecy__temp_OP_LU_Document_Selection_Disabled_post_Cleanse_290_0",
+    "sourcePort" : "output_port_0_1",
+    "target" : "BulZMP-VgTi2AojMJ85KK$$yPZh3N1t7hfKBrzw9eKwq",
+    "targetPort" : "wUYmnqL3Quz6wjRGtfjzr$$imRXOjFrz2uaj0MuNv8ze"
+  }, {
+    "id" : "NiFao2vrtUn_DShSjeYgK",
+    "source" : "L3iqXWDHcZcl-SiIfMZOI$$jZEAvhSKofGQyj-Ft3wdJ",
+    "sourcePort" : "SPdPAdfCAOGo62XZfat59$$o_ooau9JKUHrl_pmzNUoq",
+    "target" : "VwuZ4c7eHJi1Af1H9sGLy$$FywcUhuZwG8nXoymR0WGS",
+    "targetPort" : "gObYFsYLBW_e-3EE41-HA$$1pQYo9sOs2VhJ78kbB2bB"
+  } ],
+  "component" : "Model"
+}

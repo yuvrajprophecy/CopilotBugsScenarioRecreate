@@ -1,0 +1,150 @@
+{
+  "id" : "model_LU_Subcountry_Tree_Disabled_DataCleansing_1",
+  "metainfo" : {
+    "label" : "model_LU_Subcountry_Tree_Disabled_DataCleansing_1",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"prophecy__temp_LU_Subcountry_Tree_Disabled_post_DataCleansing_1_0\"",
+        "materialized" : "table",
+        "database" : "\"main\"",
+        "schema" : "\"rishabh\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "prophecy__temp_LU_Subcountry_Tree_Disabled_post_DataCleansing_1_0" : {
+      "id" : "prophecy__temp_LU_Subcountry_Tree_Disabled_post_DataCleansing_1_0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "DataCleansing_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM DataCleansing_1\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1_1",
+          "slug" : "input_port_1_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1_1",
+          "slug" : "output_port_1_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "BZl18irtmC4QFn9kGUe1H$$0TAhzaRRI2MT-nlqTqXDT" : {
+      "id" : "BZl18irtmC4QFn9kGUe1H$$0TAhzaRRI2MT-nlqTqXDT",
+      "component" : "Macro",
+      "metadata" : {
+        "label" : "DataCleansing_1",
+        "x" : -4180,
+        "y" : -660,
+        "phase" : 0
+      },
+      "properties" : {
+        "macroName" : "DataCleansing",
+        "parameters" : [ {
+          "name" : "relation_name"
+        }, {
+          "name" : "schema"
+        }, {
+          "name" : "modifyCase"
+        }, {
+          "name" : "columnNames"
+        }, {
+          "name" : "replaceNullTextFields"
+        }, {
+          "name" : "replaceNullTextWith"
+        }, {
+          "name" : "replaceNullForNumericFields"
+        }, {
+          "name" : "replaceNullNumericWith"
+        }, {
+          "name" : "trimWhiteSpace"
+        }, {
+          "name" : "removeTabsLineBreaksAndDuplicateWhitespace"
+        }, {
+          "name" : "allWhiteSpace"
+        }, {
+          "name" : "cleanLetters"
+        }, {
+          "name" : "cleanPunctuations"
+        }, {
+          "name" : "cleanNumbers"
+        }, {
+          "name" : "removeRowNullAllCols"
+        } ],
+        "projectName" : "DatabricksSqlBasics"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Cp7Ft7Wen8xZy3HgsVb3T$$OzSm6C3DmaNG1bqK8TP_t",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "VlZTfhFWvCkFYKQqnEm5l$$hYGqWnkkxWj4t4Jq19bHK",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0" : {
+      "id" : "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_346",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_LU_Subcountry_Tree_Disabled_source",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "output_port_0_1",
+          "slug" : "output_port_0_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_BZl18irtmC4QFn9kGUe1H$$0TAhzaRRI2MT-nlqTqXDT_prophecy__temp_LU_Subcountry_Tree_Disabled_post_DataCleansing_1_0",
+    "source" : "BZl18irtmC4QFn9kGUe1H$$0TAhzaRRI2MT-nlqTqXDT",
+    "sourcePort" : "VlZTfhFWvCkFYKQqnEm5l$$hYGqWnkkxWj4t4Jq19bHK",
+    "target" : "prophecy__temp_LU_Subcountry_Tree_Disabled_post_DataCleansing_1_0",
+    "targetPort" : "input_port_1_1"
+  }, {
+    "id" : "lSHzfEluRXzfwgQ-EFYJp",
+    "source" : "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0",
+    "sourcePort" : "output_port_0_1",
+    "target" : "BZl18irtmC4QFn9kGUe1H$$0TAhzaRRI2MT-nlqTqXDT",
+    "targetPort" : "Cp7Ft7Wen8xZy3HgsVb3T$$OzSm6C3DmaNG1bqK8TP_t"
+  } ],
+  "component" : "Model"
+}

@@ -1,0 +1,33 @@
+---
+version: 2
+models:
+- name: "model_OP_LU_Document_Selection_Disabled_AlteryxSelect_294"
+  tags:
+  - "prophecy_temp"
+- name: "model_OP_LU_Document_Selection_Disabled_Cleanse_290"
+  tags:
+  - "prophecy_temp"
+- name: "model_OP_LU_Document_Selection_Disabled_Join_310_inner"
+  tags:
+  - "prophecy_temp"
+- name: "model_OP_LU_Document_Selection_Disabled_Join_318_inner"
+  tags:
+  - "prophecy_temp"
+sources:
+- name: "prophecy__temp_OP_LU_Document_Selection_Disabled_source"
+  database: "main"
+  schema: "rishabh"
+  tags:
+  - "prophecy_temp"
+  config:
+    enabled: true
+  tables:
+  - name: "prophecy__temp_OP_LU_Document_Selection_Disabled_post_Cleanse_290_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_OP_LU_Document_Selection_Disabled_pre_Join_299_inner_0"
+    tags:
+    - "prophecy_temp"
+  - name: "prophecy__temp_OP_LU_Document_Selection_Disabled_pre_Join_313_inner_0"
+    tags:
+    - "prophecy_temp"

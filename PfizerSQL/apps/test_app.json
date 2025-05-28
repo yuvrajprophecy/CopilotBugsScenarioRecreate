@@ -1,0 +1,58 @@
+{
+  "id" : "test_app",
+  "metainfo" : {
+    "description" : "",
+    "pipelineId" : "test_pipeline"
+  },
+  "definition" : {
+    "template" : [ {
+      "key" : "6aoNmiVcGTVkdJsqyVvVG",
+      "id" : "CheckboxGroup1",
+      "type" : "CheckboxGroup",
+      "properties" : {
+        "configField" : "",
+        "options" : [ ]
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "e8mAnJxaUI1CT6ad3nd4b",
+      "id" : "Toggle1",
+      "type" : "Toggle",
+      "properties" : {
+        "configField" : "",
+        "label" : ""
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "D80K_SN5fFtHzFphmoPVN",
+      "id" : "FileUpload1",
+      "type" : "FileUpload",
+      "properties" : {
+        "sourceId" : "",
+        "sourceName" : "",
+        "fileTypes" : [ ]
+      },
+      "errors" : {
+        "properties" : true
+      }
+    }, {
+      "key" : "v5c5b4Y-yLjnDzmhU2u2o",
+      "id" : "Toggle2",
+      "type" : "Toggle",
+      "properties" : {
+        "configField" : "",
+        "label" : "",
+        "defaultValue" : true,
+        "tooltip" : ""
+      },
+      "errors" : {
+        "properties" : true
+      }
+    } ]
+  },
+  "instances" : { }
+}

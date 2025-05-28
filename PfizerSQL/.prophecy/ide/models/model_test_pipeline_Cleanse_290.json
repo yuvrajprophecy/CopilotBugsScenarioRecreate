@@ -1,0 +1,182 @@
+{
+  "id" : "model_test_pipeline_Cleanse_290",
+  "metainfo" : {
+    "label" : "model_test_pipeline_Cleanse_290",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"prophecy__temp_test_pipeline_post_Cleanse_290_0\"",
+        "materialized" : "table",
+        "database" : "\"main\"",
+        "schema" : "\"rishabh\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "prophecy__temp_test_pipeline_post_Cleanse_290_0" : {
+      "id" : "prophecy__temp_test_pipeline_post_Cleanse_290_0",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "Cleanse_290",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM Cleanse_290\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1_1",
+          "slug" : "input_port_1_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1_1",
+          "slug" : "output_port_1_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3" : {
+      "id" : "xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3",
+      "component" : "DataCleansing",
+      "metadata" : {
+        "label" : "Cleanse_290",
+        "x" : -340,
+        "y" : 80,
+        "phase" : 0
+      },
+      "properties" : {
+        "trimWhiteSpace" : false,
+        "replaceNullForNumericFields" : false,
+        "cleanLetters" : false,
+        "replaceNullTextWith" : "",
+        "removeRowNullAllCols" : false,
+        "replaceNullTextFields" : false,
+        "relation_name" : [ "aka_GPDIP_EDLUD_289" ],
+        "columnNames" : [ "country_name", "product_name" ],
+        "_oldMacroProperties" : {
+          "macroName" : "DataCleansing",
+          "projectName" : "DatabricksSqlBasics",
+          "parameters" : [ {
+            "name" : "relation_name",
+            "value" : "['aka_GPDIP_EDLUD_289']"
+          }, {
+            "name" : "schema",
+            "value" : "[{\"name\": \"is_active\", \"dataType\": \"String\"}, {\"name\": \"is_static\", \"dataType\": \"String\"}, {\"name\": \"extract_date\", \"dataType\": \"Timestamp\"}, {\"name\": \"product_name\", \"dataType\": \"String\"}, {\"name\": \"country_abbreviation\", \"dataType\": \"String\"}, {\"name\": \"app_country_id\", \"dataType\": \"Integer\"}, {\"name\": \"country_name\", \"dataType\": \"String\"}]"
+          }, {
+            "name" : "modifyCase",
+            "value" : "Keep original"
+          }, {
+            "name" : "columnNames",
+            "value" : "[\"country_name\", \"product_name\"]"
+          }, {
+            "name" : "replaceNullTextFields",
+            "value" : "false"
+          }, {
+            "name" : "replaceNullTextWith",
+            "value" : ""
+          }, {
+            "name" : "replaceNullForNumericFields",
+            "value" : "false"
+          }, {
+            "name" : "replaceNullNumericWith",
+            "value" : "0"
+          }, {
+            "name" : "trimWhiteSpace",
+            "value" : "false"
+          }, {
+            "name" : "removeTabsLineBreaksAndDuplicateWhitespace",
+            "value" : "false"
+          }, {
+            "name" : "allWhiteSpace",
+            "value" : "false"
+          }, {
+            "name" : "cleanLetters",
+            "value" : "false"
+          }, {
+            "name" : "cleanPunctuations",
+            "value" : "false"
+          }, {
+            "name" : "cleanNumbers",
+            "value" : "false"
+          }, {
+            "name" : "removeRowNullAllCols",
+            "value" : "false"
+          } ]
+        },
+        "schema" : "[{\"name\": \"is_active\", \"dataType\": \"String\"}, {\"name\": \"is_static\", \"dataType\": \"String\"}, {\"name\": \"extract_date\", \"dataType\": \"Timestamp\"}, {\"name\": \"product_name\", \"dataType\": \"String\"}, {\"name\": \"country_abbreviation\", \"dataType\": \"String\"}, {\"name\": \"app_country_id\", \"dataType\": \"Integer\"}, {\"name\": \"country_name\", \"dataType\": \"String\"}]",
+        "allWhiteSpace" : false,
+        "removeTabsLineBreaksAndDuplicateWhitespace" : false,
+        "modifyCase" : "Keep original",
+        "cleanPunctuations" : false,
+        "cleanNumbers" : false,
+        "replaceNullNumericWith" : 0
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "lRTu2_eRs8mxzoiRr3hna$$OWpDe8lRypA2UbcLiN-YJ",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "5mw9lWQHyoCvZnxMc2vgc$$NdFAk1ueDqFucZOg3wZ-Y",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "prophecy__temp_test_pipeline_pre_Cleanse_290_0" : {
+      "id" : "prophecy__temp_test_pipeline_pre_Cleanse_290_0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "aka_GPDIP_EDLUD_289",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "prophecy__temp_test_pipeline_pre_Cleanse_290_0",
+          "sourceType" : "Source",
+          "sourceName" : "prophecy__temp_test_pipeline_source",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "output_port_0_1",
+          "slug" : "output_port_0_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3_prophecy__temp_test_pipeline_post_Cleanse_290_0",
+    "source" : "xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3",
+    "sourcePort" : "5mw9lWQHyoCvZnxMc2vgc$$NdFAk1ueDqFucZOg3wZ-Y",
+    "target" : "prophecy__temp_test_pipeline_post_Cleanse_290_0",
+    "targetPort" : "input_port_1_1"
+  }, {
+    "id" : "conn_prophecy__temp_test_pipeline_pre_Cleanse_290_0_xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3_lRTu2_eRs8mxzoiRr3hna$$OWpDe8lRypA2UbcLiN-YJ",
+    "source" : "prophecy__temp_test_pipeline_pre_Cleanse_290_0",
+    "sourcePort" : "output_port_0_1",
+    "target" : "xl4Reg9eoA4iaiViu82R8$$IhS-d8T7lA-Md49EszGR3",
+    "targetPort" : "lRTu2_eRs8mxzoiRr3hna$$OWpDe8lRypA2UbcLiN-YJ"
+  } ],
+  "component" : "Model"
+}

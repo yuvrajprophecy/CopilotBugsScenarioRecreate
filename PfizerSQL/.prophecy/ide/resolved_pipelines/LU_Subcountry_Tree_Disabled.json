@@ -1,0 +1,180 @@
+{
+  "id" : "LU_Subcountry_Tree_Disabled",
+  "metainfo" : {
+    "label" : "LU_Subcountry_Tree_Disabled",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    }
+  },
+  "processes" : {
+    "x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w" : {
+      "id" : "x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_LU_Subcountry_Tree_Disabled_aka_GPDIP_EDLUD_346",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_LU_Subcountry_Tree_Disabled_aka_GPDIP_EDLUD_346"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0", "x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_LU_Subcountry_Tree_Disabled_aka_GPDIP_EDLUD_346_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "model_LU_Subcountry_Tree_Disabled_aka_GPDIP_EDLUD_346_out_1",
+          "slug" : "out_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "vT3x-S16ZUj1pCAQG9S5C$$NNUo92MbWyLoZ0llhliXQ" : {
+      "id" : "vT3x-S16ZUj1pCAQG9S5C$$NNUo92MbWyLoZ0llhliXQ",
+      "component" : "OrchestrationSource",
+      "metadata" : {
+        "label" : "OrchestrationSource_1",
+        "x" : -3720,
+        "y" : -700,
+        "phase" : 0
+      },
+      "properties" : {
+        "format" : {
+          "properties" : { }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "ksixxuda02lMvGylyTtUl$$EXX_hPjc8hAlRbgIrR_2O",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "qBMVd03a7wxMKRHJK757h$$KL5OZ1-WFmybHtdD6Vhvh" : {
+      "id" : "qBMVd03a7wxMKRHJK757h$$KL5OZ1-WFmybHtdD6Vhvh",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_LU_Subcountry_Tree_Disabled_Sort_266",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_LU_Subcountry_Tree_Disabled_Sort_266"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_LU_Subcountry_Tree_Disabled_post_Sort_266_0", "qBMVd03a7wxMKRHJK757h$$KL5OZ1-WFmybHtdD6Vhvh", "BQ78UeNQNYvIdrOLeWNgT$$8I2Fm4ZXjiJD-U3cgUxBW", "wI7TumTAKjHHdutIORjJk$$MxrhKG7Lsi88h5bMMsGUD", "sxICIj1lqx7Ufj-utlKmK$$xAlFZ8mFXr5KM8jVK5wq7", "BqRBZYSwH0XeV0vmv_QZg$$ZGni-yWRpg8lQsPyEYYs4", "M7YGv6Un53cgYclcn6MWY$$_jWbH_mNX6lBLoleYlN2t", "t3p9M96H0sLOMW0rYqEb2$$nUfZ_7HtIkUej2uIYWnKP", "4GjOZzxjIDAxonw9-IU2G$$rEI87bLozZ-f6n-pvxQCJ", "H6HS47JurYTUpSgSZSjwt$$nVwA9qrcRcHsMMM0XPQRS", "sTtddLcbpkZ4sGjXWD4BH$$b-82ksGef2pSf2m2Jhbxa", "Pnroa7UMT2IZ4ICdpnbOD$$rcTphJA1x7shgwZ9G7eGH", "SvKMxO3G2m_YKJ7hC86ON$$Xw-C-fFE8UiejguqvMkyr", "wOYwy9TTzDlmJnjKDC03n$$itc8NN2fcymJw6S6byWVo", "I8aCiZpXrIXEEaF8yf52O$$8QHHfMBaPeVQCMTl4jnhg", "lBPTMDhe6J8UgL0e6g48r$$CxkaYlIWM6t2gxEmJDoS1", "jShvjYZ5nx7q9mhEjnjAt$$9gvATSDGTNZbycDZ_K7zV", "tSwJrRLJM0wHdcfjzZJWG$$niU4pWR1mIytrRxrLYAo6", "YtgaqrYHXQ6Aja7h0gRYw$$eeHJpm4PqLpvg4Wb7i4vS", "-H_4BCHpHfRWLfy4eFo-9$$7qTkF47dcdjrV67K9_Xsl", "ZKzMtuv-W1AFaiTKufGM4$$Q-658QxupMWXD95Lu00-a", "NCdkG17t-p5DhG7L14jI1$$MOMzNMqXrGJM4vV_TDgc6", "QB_KMG83TSBFBx5kQvtjv$$YwlOqCBFFjtipl8K6HTze", "nlCCxaDam5XawxUV6j253$$-EWKQ3OUEZzBwzRPO7etr", "RWMt-cX4mRxkq8L-dUfNi$$CybuWaRoawjT7qkWsVWJG", "JQKatwgq8VHkYPi4XKxt2$$sQgzhfKsI9f4hsmTnQnVM", "PYQxEJvkS18BIO9J6Sf6U$$p724Zy7Gi_O4If18GJONE", "tpBzqlgFhfMbctZYIzy5d$$gaigLYoRPvc7CQecSbjGW", "XnZ5MVbzjxa2Ff1wng1SP$$Swm92ghMbeAQfBmg11qjP", "ipNpf0gb1ej2Gnz_y-t7G$$-ThihdEjSpzu1w78QyiWE", "JBGvFiqpmYrUxlIhjN7if$$DQP0g7zGaN1j3ygnhUTBd", "_jNb0ecB3l4QfipkgtPxJ$$y1MRkyysw8YnMZd4yFko8", "YUmlpCLZ_DpTICAIQTyaM$$MBJFExPNbThT0OIstkXXq", "L6tG2ri6rQGyeN0gmc5dP$$88u_qQWwVR1VQvrb-_rCj", "uU6OE6HGrXBz-ECljelLl$$lIADcCJqRXU98yQPHn3ER", "EUlXgMp3p93Qh7VkI55jh$$CKw8TG40mdIAaK0ZG8eDN", "Fwxrzrm77s8zjGD_gUVMH$$C9KY5vZKLS7Xe5ZludPtk", "8SyY4PFuz3mgITL_rrVHn$$5CLP60pZ1Pdjv_FPj63lZ", "tjbbafRkTNZPFtjm7wFYc$$Iyg3WM-qXCwMhNeymWKst", "b6vgc-qvuP29kOJdT5hsg$$9dNWchlK7jPXchBbsrXrB", "px8Z7kQ2KV3UXID2q_sTe$$AS51ZjauCtP3pkye9gyRd", "cpYCko7HCyZNxK7HLfDQX$$q_W9vQRA8k59JdiT-_ZX_", "7wuCK61HZ61IjJ1p1TK9e$$OikLptpXxOeRvI9sLwplE", "GXP65yShZVCLMTqlllkW2$$av0R4nSSgXhrBTJycVWYO", "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0", "HhshOdUSuCdpt2vbGF1AD$$2BVmGmuj3h8eGEHjTaBGd", "0I3bKAP-W64BOwRwuBGcd$$2lu0O0YVMoNAnXrcfhkvk", "c1u4OJ6oYebHxZouxXen-$$yLtPD3MSd-7U7pDYnq8KH", "aBYFMNgsvxEq5rHadcYGj$$95lxwJ4LuISrKODHDa0i1", "5iCiAt_PG8Ivq4TI0oM18$$aOMirdunhLLCJlkYLa4ql", "_s6nKl_yCkJlSS1UrpgNS$$tEKFrxVXttcXhCNnDDRhQ", "gB0MzZGOFN343LgCpMNtz$$yDmOV4TpIrBU6GjqSv6us", "gJc5AFhJw0jqG6EJlsFXO$$cKiGM279bEcBiYZoOC6zA", "Dxa2lh7K0zIfuWD0laPei$$gGEae4hftKPOChi44OU6X", "Ma3FRHjyoVklgzRCOFpO5$$vAta676D7oHvberLol1C6", "qFvJwoM98hNYQzKZr2sKH$$d6aejX5QxYZMcY-WBmGty", "Wb8phAhUT_CIdrcs1oynl$$jO-wKRNXDiKfHG1JUL5C5", "0oKggURTB-11uHwIbSyec$$xQbwm7Q5-nlKqnRHLjVX5", "ts2nutKiFA0etGDmiJWGD$$MR6a-816bRbRz7MeVCWds", "ja9Bqfbkxrlf_urArXMI4$$LLtp9upLZzCUnX1yF3mVV", "B8KQqmaGBPTczMIsInBoh$$SGC3Xgl3Uzf6T5ejHM8X6", "v48X6xh6mPgSUFxV7RQjs$$Uf_oZK57S5s94_bDb3LVl", "XhtHq85vJHYVvCzHmKpuN$$rLDepCazuXACcJgdoppn1", "hUHliOC6Ul3i0f2waxGdt$$JEc2cvPKh0x8nRq_UeAYC", "zrSsRlJfK97r5BGFVzj5n$$s-M1gzabfrXdYenR6j3Gd", "kcpTjzbgqaYFcXhh4iWCz$$twTSaiqRPmZkBzfU05nYD", "4-GoZ7VnVKwHy8lx5DWt-$$cyigoESXQKJQbL6x7Jxl3", "exQvyeZi4B0hehbWTFgB-$$DEX2GBl6-i019sMu3ijfJ", "iCY4wYyRDsKPZcfVRpnjv$$9M5negCCzbEdds63b6auD", "F4aSZkQS083Bv_8fBZPeE$$5EvEKDBC7rGFpRCUgVpU3", "AFPYnTZhcdxY1Fk8NpbMX$$UpaLr20ZUY7iUBkHV0Dc3", "00v3njMT908AvdNw2tpf3$$G9Kr618YN1fmNlcU89wap", "JY_4ZO31-Jgak9PgS7aln$$Ex6F1LDijBSLoWDEbPCZG", "mFV5vYcEuyvxMcptf3Lo8$$M7r78HHb9zTCX1Rs7EZxN", "MfU7P7nxcN8NMYUlxkfFU$$GKGSNL_Jz36V-NdR1pBc2", "GUcdU6-v9gkxeDVfUM7fq$$LwA32nEMZGfAePlKFaX2j" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_LU_Subcountry_Tree_Disabled_Sort_266_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "model_LU_Subcountry_Tree_Disabled_Sort_266_out_1",
+          "slug" : "out_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "BZl18irtmC4QFn9kGUe1H$$0TAhzaRRI2MT-nlqTqXDT" : {
+      "id" : "BZl18irtmC4QFn9kGUe1H$$0TAhzaRRI2MT-nlqTqXDT",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "model_LU_Subcountry_Tree_Disabled_DataCleansing_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "model_LU_Subcountry_Tree_Disabled_DataCleansing_1"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "prophecy__temp_LU_Subcountry_Tree_Disabled_post_DataCleansing_1_0", "BZl18irtmC4QFn9kGUe1H$$0TAhzaRRI2MT-nlqTqXDT", "prophecy__temp_LU_Subcountry_Tree_Disabled_post_aka_GPDIP_EDLUD_346_0" ],
+        "type" : "table",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "model_LU_Subcountry_Tree_Disabled_DataCleansing_1_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "model_LU_Subcountry_Tree_Disabled_DataCleansing_1_out_1",
+          "slug" : "out_1"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "S-Prv6msQPSsrftEWb3wX$$3MfdgZw2OzfTf3zCHWBE0" : {
+      "id" : "S-Prv6msQPSsrftEWb3wX$$3MfdgZw2OzfTf3zCHWBE0",
+      "component" : "OrchestrationSource",
+      "kind" : "DatabricksVolumeSource",
+      "metadata" : {
+        "label" : "OrchestrationSource_2",
+        "x" : -4480,
+        "y" : -780,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "databricks",
+          "properties" : { },
+          "type" : "connector"
+        },
+        "format" : {
+          "category" : "file",
+          "kind" : "csv",
+          "properties" : {
+            "allowEmptyColumnNames" : true,
+            "header" : true,
+            "nullValue" : "",
+            "separator" : ","
+          }
+        },
+        "properties" : { }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "NscwvJBRJyCwS2nX2S8Om$$YIU_Awbax1Wvx1O8F2S9r",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w_qBMVd03a7wxMKRHJK757h$$KL5OZ1-WFmybHtdD6Vhvh",
+    "source" : "x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w",
+    "sourcePort" : "model_LU_Subcountry_Tree_Disabled_aka_GPDIP_EDLUD_346_out_1",
+    "target" : "qBMVd03a7wxMKRHJK757h$$KL5OZ1-WFmybHtdD6Vhvh",
+    "targetPort" : "model_LU_Subcountry_Tree_Disabled_Sort_266_in_1"
+  }, {
+    "id" : "conn_x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w_BZl18irtmC4QFn9kGUe1H$$0TAhzaRRI2MT-nlqTqXDT",
+    "source" : "x1HynECV6CGdjvMpZ9Wy0$$_L2SyLOu31o8_6oCt8W5w",
+    "sourcePort" : "model_LU_Subcountry_Tree_Disabled_aka_GPDIP_EDLUD_346_out_1",
+    "target" : "BZl18irtmC4QFn9kGUe1H$$0TAhzaRRI2MT-nlqTqXDT",
+    "targetPort" : "model_LU_Subcountry_Tree_Disabled_DataCleansing_1_in_1"
+  } ],
+  "component" : "Pipeline"
+}

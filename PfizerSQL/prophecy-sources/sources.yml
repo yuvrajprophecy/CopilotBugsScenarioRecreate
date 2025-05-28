@@ -1,0 +1,305 @@
+---
+version: 2
+sources:
+- name: "main.rishabh"
+  database: "main"
+  schema: "rishabh"
+  tables:
+  - name: "1k_aka_gpdip_edlud_302"
+    columns:
+    - name: "r_object_id"
+      dataType:
+        type: "String"
+    - name: "i_position"
+      dataType:
+        type: "Integer"
+    - name: "name"
+      dataType:
+        type: "String"
+    - name: "value"
+      dataType:
+        type: "Integer"
+    type: "table"
+  - name: "1k_aka_gpdip_edlud_289"
+    description: "Country-specific product data, providing insights into product availability\
+      \ and status across different regions."
+    columns:
+    - name: "is_active"
+      description: "Indicates whether the product is currently active"
+      dataType:
+        type: "String"
+    - name: "is_static"
+      description: "Indicates whether the product is static or dynamic"
+      dataType:
+        type: "String"
+    - name: "extract_date"
+      description: "Date when the data was extracted"
+      dataType:
+        type: "String"
+    - name: "product_name"
+      description: "Name of the product being referenced"
+      dataType:
+        type: "String"
+    - name: "country_abbreviation"
+      description: "Abbreviation representing the country"
+      dataType:
+        type: "String"
+    - name: "app_country_id"
+      description: "Unique identifier for the application country"
+      dataType:
+        type: "Integer"
+    - name: "country_name"
+      description: "The full name of the country"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "1k_aka_gpdip_edlud_298"
+    columns:
+    - name: "subtype"
+      dataType:
+        type: "String"
+    - name: "object_name"
+      dataType:
+        type: "String"
+    - name: "xm_status"
+      dataType:
+        type: "String"
+    - name: "i_has_folder"
+      dataType:
+        type: "String"
+    - name: "xm_language"
+      dataType:
+        type: "String"
+    - name: "r_object_id"
+      dataType:
+        type: "String"
+    - name: "title"
+      dataType:
+        type: "String"
+    - name: "i_chronicle_id"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "1k_aka_gpdip_edlud_324"
+    columns:
+    - name: "r_object_id"
+      dataType:
+        type: "String"
+    - name: "i_position"
+      dataType:
+        type: "Integer"
+    - name: "name"
+      dataType:
+        type: "String"
+    - name: "value"
+      dataType:
+        type: "Integer"
+    type: "table"
+  - name: "1k_aka_gpdip_edlud_312"
+    columns:
+    - name: "subtype"
+      dataType:
+        type: "String"
+    - name: "object_name"
+      dataType:
+        type: "String"
+    - name: "xm_status"
+      dataType:
+        type: "String"
+    - name: "i_has_folder"
+      dataType:
+        type: "String"
+    - name: "xm_language"
+      dataType:
+        type: "String"
+    - name: "r_object_id"
+      dataType:
+        type: "String"
+    - name: "title"
+      dataType:
+        type: "String"
+    - name: "i_chronicle_id"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "SQL_1K_LU_Document_Selection_Disabled"
+    columns: []
+    type: "table"
+  - name: "op_sql_1k_lu_document_selection_disabled"
+    columns: []
+    type: "table"
+  - name: "op_sql_1M_lu_document_selection_disabled"
+    columns: []
+    type: "table"
+  - name: "1m_aka_gpdip_edlud_302"
+    columns:
+    - name: "r_object_id"
+      dataType:
+        type: "String"
+    - name: "i_position"
+      dataType:
+        type: "Integer"
+    - name: "name"
+      dataType:
+        type: "String"
+    - name: "value"
+      dataType:
+        type: "Integer"
+    type: "table"
+  - name: "1m_aka_gpdip_edlud_324"
+    columns:
+    - name: "r_object_id"
+      dataType:
+        type: "String"
+    - name: "i_position"
+      dataType:
+        type: "Integer"
+    - name: "name"
+      dataType:
+        type: "String"
+    - name: "value"
+      dataType:
+        type: "Integer"
+    type: "table"
+  - name: "1m_aka_gpdip_edlud_312"
+    columns:
+    - name: "subtype"
+      dataType:
+        type: "String"
+    - name: "object_name"
+      dataType:
+        type: "String"
+    - name: "xm_status"
+      dataType:
+        type: "String"
+    - name: "i_has_folder"
+      dataType:
+        type: "String"
+    - name: "xm_language"
+      dataType:
+        type: "String"
+    - name: "r_object_id"
+      dataType:
+        type: "String"
+    - name: "title"
+      dataType:
+        type: "String"
+    - name: "i_chronicle_id"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "1m_aka_gpdip_edlud_298"
+    columns:
+    - name: "subtype"
+      dataType:
+        type: "String"
+    - name: "object_name"
+      dataType:
+        type: "String"
+    - name: "xm_status"
+      dataType:
+        type: "String"
+    - name: "i_has_folder"
+      dataType:
+        type: "String"
+    - name: "xm_language"
+      dataType:
+        type: "String"
+    - name: "r_object_id"
+      dataType:
+        type: "String"
+    - name: "title"
+      dataType:
+        type: "String"
+    - name: "i_chronicle_id"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "1m_aka_gpdip_edlud_289"
+    description: "Country-specific product data, providing insights into product availability\
+      \ and status across different regions."
+    columns:
+    - name: "is_active"
+      description: "Indicates whether the product is currently active"
+      dataType:
+        type: "String"
+    - name: "is_static"
+      description: "Indicates whether the data is static or dynamic"
+      dataType:
+        type: "String"
+    - name: "extract_date"
+      description: "Date when the data was extracted"
+      dataType:
+        type: "String"
+    - name: "product_name"
+      description: "Name of the product being tracked"
+      dataType:
+        type: "String"
+    - name: "country_abbreviation"
+      description: "Abbreviation for the country name"
+      dataType:
+        type: "String"
+    - name: "app_country_id"
+      description: "Unique identifier for the application country"
+      dataType:
+        type: "Integer"
+    - name: "country_name"
+      description: "The full name of the country"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "SQL_1M_LU_Document_Selection_Disabled"
+    columns: []
+    type: "table"
+  - name: "large_aka_gpdip_edlud_133"
+    columns:
+    - name: "r_object_id"
+      dataType:
+        type: "String"
+    - name: "i_has_folder"
+      dataType:
+        type: "String"
+    - name: "i_chronicle_id"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "large_aka_gpdip_edlud_113_script"
+    description: "Country-specific product data, providing insights into active applications\
+      \ and their statuses across different regions."
+    columns:
+    - name: "is_active"
+      description: "Indicates whether the product is currently active"
+      dataType:
+        type: "String"
+    - name: "is_static"
+      description: "Indicates whether the product is static or dynamic"
+      dataType:
+        type: "String"
+    - name: "product_name"
+      description: "Name of the product associated with the application"
+      dataType:
+        type: "String"
+    - name: "parent_app_country_id"
+      description: "The ID of the parent application country"
+      dataType:
+        type: "Integer"
+    - name: "country_abbreviation"
+      description: "Abbreviation representing the country"
+      dataType:
+        type: "String"
+    - name: "app_country_id"
+      description: "The unique identifier for the application country"
+      dataType:
+        type: "Integer"
+    - name: "country_name"
+      description: "The name of the country associated with the application"
+      dataType:
+        type: "String"
+    type: "table"
+- name: "alteryx_pov.pfizer"
+  database: "alteryx_pov"
+  schema: "pfizer"
+  tables:
+  - name: "aka_gpdip_edlud_302"
+    columns: []
+    type: "table"
