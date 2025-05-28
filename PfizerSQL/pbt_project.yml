@@ -82,19 +82,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: r_object_id
-          dataType:
-            type: String
-        - name: i_position
-          dataType:
-            type: Integer
-        - name: name
-          dataType:
-            type: String
-        - name: value
-          dataType:
-            type: Integer
+        fields: []
       description: null
       author: rishabh+1@prophecy.io
       createdAt: '2025-05-16 02:30:57'
@@ -103,28 +91,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: is_active
-          dataType:
-            type: String
-        - name: is_static
-          dataType:
-            type: String
-        - name: extract_date
-          dataType:
-            type: String
-        - name: product_name
-          dataType:
-            type: String
-        - name: country_abbreviation
-          dataType:
-            type: String
-        - name: app_country_id
-          dataType:
-            type: Integer
-        - name: country_name
-          dataType:
-            type: String
+        fields: []
       description: Country-specific product data, providing insights into product
         availability and status across different regions.
       author: rishabh+1@prophecy.io
@@ -134,31 +101,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: subtype
-          dataType:
-            type: String
-        - name: object_name
-          dataType:
-            type: String
-        - name: xm_status
-          dataType:
-            type: String
-        - name: i_has_folder
-          dataType:
-            type: String
-        - name: xm_language
-          dataType:
-            type: String
-        - name: r_object_id
-          dataType:
-            type: String
-        - name: title
-          dataType:
-            type: String
-        - name: i_chronicle_id
-          dataType:
-            type: String
+        fields: []
       description: null
       author: rishabh+1@prophecy.io
       createdAt: '2025-05-16 02:32:55'
@@ -167,19 +110,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: r_object_id
-          dataType:
-            type: String
-        - name: i_position
-          dataType:
-            type: Integer
-        - name: name
-          dataType:
-            type: String
-        - name: value
-          dataType:
-            type: Integer
+        fields: []
       description: null
       author: rishabh+1@prophecy.io
       createdAt: '2025-05-16 02:33:51'
@@ -188,31 +119,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: subtype
-          dataType:
-            type: String
-        - name: object_name
-          dataType:
-            type: String
-        - name: xm_status
-          dataType:
-            type: String
-        - name: i_has_folder
-          dataType:
-            type: String
-        - name: xm_language
-          dataType:
-            type: String
-        - name: r_object_id
-          dataType:
-            type: String
-        - name: title
-          dataType:
-            type: String
-        - name: i_chronicle_id
-          dataType:
-            type: String
+        fields: []
       description: null
       author: rishabh+1@prophecy.io
       createdAt: '2025-05-16 02:34:40'
@@ -248,19 +155,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: r_object_id
-          dataType:
-            type: String
-        - name: i_position
-          dataType:
-            type: Integer
-        - name: name
-          dataType:
-            type: String
-        - name: value
-          dataType:
-            type: Integer
+        fields: []
       description: null
       author: rishabh+1@prophecy.io
       createdAt: '2025-05-16 04:19:56'
@@ -269,19 +164,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: r_object_id
-          dataType:
-            type: String
-        - name: i_position
-          dataType:
-            type: Integer
-        - name: name
-          dataType:
-            type: String
-        - name: value
-          dataType:
-            type: Integer
+        fields: []
       description: null
       author: rishabh+1@prophecy.io
       createdAt: '2025-05-16 04:20:51'
@@ -290,31 +173,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: subtype
-          dataType:
-            type: String
-        - name: object_name
-          dataType:
-            type: String
-        - name: xm_status
-          dataType:
-            type: String
-        - name: i_has_folder
-          dataType:
-            type: String
-        - name: xm_language
-          dataType:
-            type: String
-        - name: r_object_id
-          dataType:
-            type: String
-        - name: title
-          dataType:
-            type: String
-        - name: i_chronicle_id
-          dataType:
-            type: String
+        fields: []
       description: null
       author: rishabh+1@prophecy.io
       createdAt: '2025-05-16 04:21:53'
@@ -323,31 +182,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: subtype
-          dataType:
-            type: String
-        - name: object_name
-          dataType:
-            type: String
-        - name: xm_status
-          dataType:
-            type: String
-        - name: i_has_folder
-          dataType:
-            type: String
-        - name: xm_language
-          dataType:
-            type: String
-        - name: r_object_id
-          dataType:
-            type: String
-        - name: title
-          dataType:
-            type: String
-        - name: i_chronicle_id
-          dataType:
-            type: String
+        fields: []
       description: null
       author: rishabh+1@prophecy.io
       createdAt: '2025-05-16 04:23:15'
@@ -356,28 +191,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: is_active
-          dataType:
-            type: String
-        - name: is_static
-          dataType:
-            type: String
-        - name: extract_date
-          dataType:
-            type: String
-        - name: product_name
-          dataType:
-            type: String
-        - name: country_abbreviation
-          dataType:
-            type: String
-        - name: app_country_id
-          dataType:
-            type: Integer
-        - name: country_name
-          dataType:
-            type: String
+        fields: []
       description: Country-specific product data, providing insights into product
         availability and status across different regions.
       author: rishabh+1@prophecy.io
@@ -396,16 +210,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: r_object_id
-          dataType:
-            type: String
-        - name: i_has_folder
-          dataType:
-            type: String
-        - name: i_chronicle_id
-          dataType:
-            type: String
+        fields: []
       description: null
       author: rishabh+1@prophecy.io
       createdAt: '2025-05-19 15:43:29'
@@ -414,28 +219,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: is_active
-          dataType:
-            type: String
-        - name: is_static
-          dataType:
-            type: String
-        - name: product_name
-          dataType:
-            type: String
-        - name: parent_app_country_id
-          dataType:
-            type: Integer
-        - name: country_abbreviation
-          dataType:
-            type: String
-        - name: app_country_id
-          dataType:
-            type: Integer
-        - name: country_name
-          dataType:
-            type: String
+        fields: []
       description: Country-specific product data, providing insights into active applications
         and their statuses across different regions.
       author: rishabh+1@prophecy.io
@@ -448,15 +232,7 @@ sqlPipeline:
   author: rishabh+1@prophecy.io
   createdAt: '2025-05-07 08:45:33'
 dependencies: []
-projectDependencies:
-  '45117':
-    projectUID: 45117
-    projectName: ProphecyDatabricksSqlBasics
-    repositoryPath: gitUri=https://github.com/prophecy-io/databricks-sql-basics&subPath=
-    version: 0.0.4
-    isDefault: true
-    author: null
-    createdAt: '2025-05-07 08:45:00'
+projectDependencies: {}
 flags:
   shouldAddDefaultDependenciesIfAbsent: false
 pipelineConfigurations: {}
@@ -467,11 +243,11 @@ sqlOrchestratorPipelines:
     description: null
     author: rishabh+1@prophecy.io
     files:
-    - models/Large_LU_Document_Selection_Disabled/model_Large_LU_Document_Selection_Disabled_Join_310_inner.sql
-    - models/Large_LU_Document_Selection_Disabled/schema.yml
-    - models/Large_LU_Document_Selection_Disabled/model_Large_LU_Document_Selection_Disabled_Join_318_inner.sql
-    - models/Large_LU_Document_Selection_Disabled/model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294.sql
     - models/Large_LU_Document_Selection_Disabled/model_Large_LU_Document_Selection_Disabled_Cleanse_290.sql
+    - models/Large_LU_Document_Selection_Disabled/model_Large_LU_Document_Selection_Disabled_Join_318_inner.sql
+    - models/Large_LU_Document_Selection_Disabled/model_Large_LU_Document_Selection_Disabled_Join_310_inner.sql
+    - models/Large_LU_Document_Selection_Disabled/model_Large_LU_Document_Selection_Disabled_AlteryxSelect_294.sql
+    - models/Large_LU_Document_Selection_Disabled/schema.yml
     - .prophecy/ide/pipelines/Large_LU_Document_Selection_Disabled.json
     - pipelines/Large_LU_Document_Selection_Disabled.py
     createdAt: '2025-05-16 14:56:42'
@@ -491,13 +267,13 @@ sqlOrchestratorPipelines:
     description: null
     author: rishabh+1@prophecy.io
     files:
-    - models/test_pipeline/schema.yml
     - models/test_pipeline/model_test_pipeline_Join_310_inner.sql
-    - models/test_pipeline/model_test_pipeline_Sort_266.sql
-    - models/test_pipeline2/schema.yml
-    - models/test_pipeline/model_test_pipeline_Join_318_inner.sql
-    - models/test_pipeline/model_test_pipeline_Cleanse_290.sql
+    - models/test_pipeline/schema.yml
     - models/test_pipeline/model_test_pipeline_AlteryxSelect_294.sql
+    - models/test_pipeline2/schema.yml
+    - models/test_pipeline/model_test_pipeline_Sort_266.sql
+    - models/test_pipeline/model_test_pipeline_Cleanse_290.sql
+    - models/test_pipeline/model_test_pipeline_Join_318_inner.sql
     - .prophecy/ide/pipelines/test_pipeline.json
     - pipelines/test_pipeline.py
     createdAt: '2025-05-07 13:27:48'
@@ -507,11 +283,11 @@ sqlOrchestratorPipelines:
     description: null
     author: rishabh+1@prophecy.io
     files:
-    - models/LU_Document_Selection_Disabled/model_LU_Document_Selection_Disabled_Join_310_inner.sql
-    - models/LU_Document_Selection_Disabled/model_LU_Document_Selection_Disabled_Cleanse_290.sql
-    - models/LU_Document_Selection_Disabled/schema.yml
     - models/LU_Document_Selection_Disabled/model_LU_Document_Selection_Disabled_AlteryxSelect_294.sql
+    - models/LU_Document_Selection_Disabled/schema.yml
+    - models/LU_Document_Selection_Disabled/model_LU_Document_Selection_Disabled_Join_310_inner.sql
     - models/LU_Document_Selection_Disabled/model_LU_Document_Selection_Disabled_Join_318_inner.sql
+    - models/LU_Document_Selection_Disabled/model_LU_Document_Selection_Disabled_Cleanse_290.sql
     - .prophecy/ide/pipelines/LU_Document_Selection_Disabled.json
     - pipelines/LU_Document_Selection_Disabled.py
     createdAt: '2025-05-07 09:33:01'
@@ -547,10 +323,10 @@ sqlOrchestratorPipelines:
     author: rishabh+1@prophecy.io
     files:
     - models/OP_LARGE_LU_Document_Selection_Disabled/model_OP_LARGE_LU_Document_Selection_Disabled_AlteryxSelect_294.sql
-    - models/OP_LARGE_LU_Document_Selection_Disabled/schema.yml
-    - models/OP_LARGE_LU_Document_Selection_Disabled/model_OP_LARGE_LU_Document_Selection_Disabled_Join_318_inner.sql
-    - models/OP_LARGE_LU_Document_Selection_Disabled/model_OP_LARGE_LU_Document_Selection_Disabled_Cleanse_290.sql
     - models/OP_LARGE_LU_Document_Selection_Disabled/model_OP_LARGE_LU_Document_Selection_Disabled_Join_310_inner.sql
+    - models/OP_LARGE_LU_Document_Selection_Disabled/model_OP_LARGE_LU_Document_Selection_Disabled_Cleanse_290.sql
+    - models/OP_LARGE_LU_Document_Selection_Disabled/model_OP_LARGE_LU_Document_Selection_Disabled_Join_318_inner.sql
+    - models/OP_LARGE_LU_Document_Selection_Disabled/schema.yml
     - .prophecy/ide/pipelines/OP_LARGE_LU_Document_Selection_Disabled.json
     - pipelines/OP_LARGE_LU_Document_Selection_Disabled.py
     createdAt: '2025-05-16 04:17:35'
@@ -571,11 +347,11 @@ sqlOrchestratorPipelines:
     description: null
     author: rishabh+1@prophecy.io
     files:
-    - models/OP_LU_Document_Selection_Disabled/model_OP_LU_Document_Selection_Disabled_Cleanse_290.sql
+    - models/OP_LU_Document_Selection_Disabled/model_OP_LU_Document_Selection_Disabled_AlteryxSelect_294.sql
     - models/OP_LU_Document_Selection_Disabled/model_OP_LU_Document_Selection_Disabled_Join_310_inner.sql
+    - models/OP_LU_Document_Selection_Disabled/model_OP_LU_Document_Selection_Disabled_Cleanse_290.sql
     - models/OP_LU_Document_Selection_Disabled/model_OP_LU_Document_Selection_Disabled_Join_318_inner.sql
     - models/OP_LU_Document_Selection_Disabled/schema.yml
-    - models/OP_LU_Document_Selection_Disabled/model_OP_LU_Document_Selection_Disabled_AlteryxSelect_294.sql
     - .prophecy/ide/pipelines/OP_LU_Document_Selection_Disabled.json
     - pipelines/OP_LU_Document_Selection_Disabled.py
     createdAt: '2025-05-16 02:51:40'
